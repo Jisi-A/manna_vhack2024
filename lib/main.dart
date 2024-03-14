@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manna_vhack2024/components/custom_appbar.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +10,13 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('change!'),
+        body: TAppBar(
+          title: 'Custom',
+          isIcon: true,
         ),
-      ),
+      )
     );
   }
 }
