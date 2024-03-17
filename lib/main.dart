@@ -6,6 +6,9 @@ import 'package:manna_vhack2024/pages/home.dart';
 import 'package:manna_vhack2024/pages/community.dart';
 import 'package:manna_vhack2024/pages/ai_assistant.dart';
 import 'package:manna_vhack2024/pages/marketplace.dart';
+import 'package:manna_vhack2024/pages/claysoil.dart';
+import 'package:manna_vhack2024/pages/soil_prepare.dart';
+import 'package:manna_vhack2024/pages/pest_management.dart';
 
 //first default page is home page
 void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
@@ -14,4 +17,7 @@ void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
       '/ai_assistant': (context) => ai_assistant(),
       '/marketplace': (context) => marketplace(),
       '/account': (context) => account(),
+      '/clay': (context) => claysoil(),
+      '/soil_prepare': (context) => soil_prepare(),
+      '/pest_management': (context) => pest_management(),
     }));

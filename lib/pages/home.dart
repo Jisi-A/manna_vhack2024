@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manna_vhack2024/components/custom_appbar.dart';
 
 class home extends StatefulWidget {
   @override
@@ -9,15 +10,19 @@ class _homeState extends State<home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: TAppBar(
+        title: 'Soil Preparation',
+        isIcon: true,
+      ),
       body: Padding(
-        padding: EdgeInsets.fromLTRB(5.0, 20.0, 5.0, 5.0),
+        padding: EdgeInsets.all(5.0),
         child: Stack(
           children: [
             Positioned(
-              top: 20.0,
+              top: 0.0,
               left: 20.0,
               right: 20.0,
-              bottom: MediaQuery.of(context).size.height * 0.24,
+              bottom: MediaQuery.of(context).size.height * 0.20,
               child: Container(
                 padding: EdgeInsets.fromLTRB(20.0, 4.0, 20.0, 20.0),
                 decoration: BoxDecoration(
@@ -48,34 +53,39 @@ class _homeState extends State<home> {
                           Row(
                             children: [
                               Expanded(
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 120.0,
-                                      child: Image.asset(
-                                        'assets/ClaySoil.jpg',
-                                        fit: BoxFit.cover,
+                                child: GestureDetector(
+                                  onTap: () {
+                                    Navigator.pushNamed(context, '/pest_management'); // Replace '/pest_management' with the '/clay'
+                                  },
+                                  child: Stack(
+                                    children: [
+                                      Container(
+                                        height: 120.0,
+                                        child: Image.asset(
+                                          'assets/ClaySoil.jpg',
+                                          fit: BoxFit.cover,
+                                        ),
                                       ),
-                                    ),
-                                    Positioned(
-                                      bottom: 0,
-                                      left: 0,
-                                      right: 0,
-                                      child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
-                                          child: Text(
-                                            'CLAY',
-                                            style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
+                                      Positioned(
+                                        bottom: 0,
+                                        left: 0,
+                                        right: 0,
+                                        child: Container(
+                                          padding: EdgeInsets.all(8.0),
+                                          child: Center(
+                                            child: Text(
+                                              'CLAY',
+                                              style: TextStyle(
+                                                color: Colors.white, // Changed text color to white
+                                                fontWeight: FontWeight.bold, // Made text bold
+                                                fontSize: 22.0, // Adjusted font size
+                                              ),
                                             ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
+                                    ],
+                                  ),
                                 ),
                               ),
                               SizedBox(width: 8.0),
@@ -207,7 +217,7 @@ class _homeState extends State<home> {
               ),
             ),
             Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.20, // Position the grey line just above the second positioned container
+              bottom: MediaQuery.of(context).size.height * 0.18, // Position the grey line just above the second positioned container
               left: 20.0,
               right: 20.0,
               child: Container(
@@ -216,7 +226,7 @@ class _homeState extends State<home> {
               ),
             ),
             Positioned(
-              bottom: 20.0,
+              bottom: 10.0,
               left: 0,
               right: 0,
               child: Container( // Container C3
@@ -249,17 +259,22 @@ class _homeState extends State<home> {
                           ),
                           SizedBox(height: 5.0),
                           Row(
-                            mainAxisAlignment: MainAxisAlignment.center, // Align the container to the center horizontally
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Container(
-                                padding: EdgeInsets.all(8.0),
-                                decoration: BoxDecoration(
-                                  color: Color.fromARGB(255, 7, 175, 107), // Color of curved container
-                                  borderRadius: BorderRadius.circular(20.0), // Border radius of curved container
-                                ),
-                                child: Text(
-                                  'LEARN MORE', // Updated text to 'LEARN MORE'
-                                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0), // Bold and bigger font size
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.pushNamed(context, '/soil_prepare');
+                                },
+                                child: Container(
+                                  padding: EdgeInsets.fromLTRB(8.0, 5.0, 8.0, 5.0),
+                                  decoration: BoxDecoration(
+                                    color: Color.fromARGB(255, 7, 175, 107),
+                                    borderRadius: BorderRadius.circular(20.0),
+                                  ),
+                                  child: Text(
+                                    'LEARN MORE',
+                                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0),
+                                  ),
                                 ),
                               ),
                             ],
