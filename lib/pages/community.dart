@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -25,7 +27,7 @@ class _communityState extends State<community> {
                 Row(
                   children: [
                     CircleAvatar(
-                      radius: 35, // Decreased the radius to make it smaller
+                      radius: 25, // Decreased the radius to make it smaller
                       backgroundImage: AssetImage('assets/avatar.png'),
                     ),
                     SizedBox(
@@ -36,6 +38,8 @@ class _communityState extends State<community> {
                         decoration: InputDecoration(
                           border: OutlineInputBorder(),
                           labelText: 'Share your thoughts...',
+                          labelStyle: TextStyle(
+                              fontSize: 12), // Decreased the font size to 12
                         ),
                       ),
                     ),
@@ -54,7 +58,10 @@ class _communityState extends State<community> {
                   crossAxisCount: 2,
                   children: [
                     CommunityPost(),
-                    CommunityPost(),
+                    CommunityPost(
+                        postImage: 'assets/tomato.jpg',
+                        name: "Chow Qian Qian",
+                        title: "My tomato plant is growing well!"),
                     CommunityPost(),
                     CommunityPost(),
                     CommunityPost(),

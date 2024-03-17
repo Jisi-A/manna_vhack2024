@@ -8,10 +8,14 @@ import 'package:manna_vhack2024/pages/ai_assistant.dart';
 import 'package:manna_vhack2024/pages/marketplace.dart';
 
 //first default page is home page
-void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
-      '/home': (context) => botNavBar(),
-      '/community': (context) => community(),
-      '/ai_assistant': (context) => ai_assistant(),
-      '/marketplace': (context) => marketplace(),
-      '/account': (context) => account(),
-    }));
+void main() => runApp(MaterialApp(
+      debugShowCheckedModeBanner: false, // Remove debug banner
+      initialRoute: '/home',
+      routes: {
+        '/home': (context) => botNavBar(),
+        '/community': (context) => community(),
+        '/ai_assistant': (context) => ai_assistant(),
+        '/marketplace': (context) => marketplace(),
+        '/account': (context) => account(),
+      },
+    ));
