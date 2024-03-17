@@ -56,6 +56,7 @@ class _communityState extends State<community> {
                   shrinkWrap: true,
                   physics: NeverScrollableScrollPhysics(),
                   crossAxisCount: 2,
+                  childAspectRatio: 0.7,
                   children: [
                     CommunityPost(),
                     CommunityPost(
