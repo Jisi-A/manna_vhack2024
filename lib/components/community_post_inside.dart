@@ -25,8 +25,8 @@ class CommunityPostInside extends StatelessWidget {
                 radius: 25,
                 backgroundImage: AssetImage('$avatarImage'),
               ),
-              SizedBox(width: 10),
-              Text('$name'),
+              SizedBox(width: 5),
+              Text('$name', style: TextStyle(fontSize: 15)),
             ],
           ),
           actions: [
@@ -79,6 +79,18 @@ class CommunityPostInside extends StatelessWidget {
                         '$title',
                         style: TextStyle(
                             fontSize: 30, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        'I got my plant a new pot and it looks so much better now!',
+                        style: TextStyle(fontSize: 18),
                       ),
                     ),
                   ),
