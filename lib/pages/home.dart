@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:manna_vhack2024/components/custom_appbar.dart';
+import 'package:flutter/widgets.dart';
+import 'dart:convert';
+import 'package:intl/intl.dart';
+import 'package:http/http.dart';
+import 'package:manna_vhack2024/components/plainCard.dart';
+import 'package:manna_vhack2024/components/arrowCard.dart';
 
 class home extends StatefulWidget {
   @override
@@ -7,288 +12,253 @@ class home extends StatefulWidget {
 }
 
 class _homeState extends State<home> {
+
+  String location = 'Gelugor, Penang'; // location name for the UI
+  late String time = 'test'; // the time in that location
+  late bool isDayTime; // true or false if daytime or not
+  late String datetime;
+  String formattedDate = 'test';
+
+  Future<void> getTime() async {
+
+    try {
+      // make the request
+      Response response = await get(Uri.parse("http://worldtimeapi.org/api/timezone/asia/kuala_lumpur"));
+      Map data = jsonDecode(response.body);
+
+      // get properties from data
+      datetime = data['datetime'];
+
+      String dow = data['utc_offset'];
+      dow = dow.substring(1,3);
+
+      // Create DateTime object
+      DateTime now = DateTime.parse(datetime);
+      now = now.add(Duration(hours: int.parse(dow)));
+
+      // set the time property
+      isDayTime = now.hour > 6 && now.hour < 20 ? true : false;
+      time = DateFormat.jm().format(now);
+
+      // format the date
+      var outputFormat = DateFormat("EEEE, d MMMM");
+      formattedDate = outputFormat.format(now);
+    } catch (e) {
+      print('caught error: $e');
+      time = 'could not get time data';
+      formattedDate = 'could not get time data';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: TAppBar(
-        title: 'Soil Preparation',
-        isIcon: true,
-      ),
-      body: Padding(
-        padding: EdgeInsets.all(5.0),
-        child: Stack(
-          children: [
-            Positioned(
-              top: 0.0,
-              left: 20.0,
-              right: 20.0,
-              bottom: MediaQuery.of(context).size.height * 0.20,
+    return FutureBuilder(
+      future: getTime(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return CircularProgressIndicator(); // Show loading spinner while waiting
+        } else if (snapshot.error != null) {
+          return Text('Error: ${snapshot.error}'); // Show error message if something went wrong
+        } else {
+          return Scaffold(
+            body: SingleChildScrollView(
               child: Container(
-                padding: EdgeInsets.fromLTRB(20.0, 4.0, 20.0, 20.0),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 172, 232, 181), // Changed the color
-                  borderRadius: BorderRadius.circular(20.0), // Added border radius
+                  gradient: LinearGradient(
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    colors: [
+                      Color.fromRGBO(111, 149, 237, 100),
+                      Colors.white,
+                    ],
+                  ),
                 ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Type of Soils',
+                child: Center(
+                  child: Column(
+                    children: <Widget>[
+                      SizedBox(
+                        height: 60,
+                      ),
+                      Text(
+                        formattedDate,
                         style: TextStyle(
-                          fontSize: 22.0,
-                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                          fontSize: 28,
+                        ),
+                      ), 
+                      Text(
+                        location,
+                        style: TextStyle(
+                          color: Colors.grey[600],
+                          fontSize: 20,
+                        ),
+                      ), 
+                      SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        time,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 48,
                         ),
                       ),
-                    ),
-                    Container(
-                      padding: EdgeInsets.all(8.0),
-                      decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255), // Changed the color
+                      SizedBox(
+                        height: 10,
                       ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Row(
-                            children: [
-                              Expanded(
-                                child: GestureDetector(
-                                  onTap: () {
-                                    Navigator.pushNamed(context, '/pest_management'); // Replace '/pest_management' with the '/clay'
-                                  },
-                                  child: Stack(
-                                    children: [
-                                      Container(
-                                        height: 120.0,
-                                        child: Image.asset(
-                                          'assets/ClaySoil.jpg',
-                                          fit: BoxFit.cover,
-                                        ),
-                                      ),
-                                      Positioned(
-                                        bottom: 0,
-                                        left: 0,
-                                        right: 0,
-                                        child: Container(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Center(
-                                            child: Text(
-                                              'CLAY',
-                                              style: TextStyle(
-                                                color: Colors.white, // Changed text color to white
-                                                fontWeight: FontWeight.bold, // Made text bold
-                                                fontSize: 22.0, // Adjusted font size
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                              SizedBox(width: 8.0),
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 120.0,
-                                      child: Image.asset(
-                                        'assets/LoamSoil.png',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Positioned(
-                                      bottom: 0,
-                                      left: 0,
-                                      right: 0,
-                                      child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
-                                          child: Text(
-                                            'LOAM',
-                                            style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          SizedBox(
+                            width: 65,
                           ),
-                          SizedBox(height: 8.0),
-                          Row(
-                            children: [
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 120.0,
-                                      child: Image.asset(
-                                        'assets/SandSoil.jpg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Positioned(
-                                      bottom: 0,
-                                      left: 0,
-                                      right: 0,
-                                      child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
-                                          child: Text(
-                                            'SAND',
-                                            style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              SizedBox(width: 8.0),
-                              Expanded(
-                                child: Stack(
-                                  children: [
-                                    Container(
-                                      height: 120.0,
-                                      child: Image.asset(
-                                        'assets/SiltSoil.jpeg',
-                                        fit: BoxFit.cover,
-                                      ),
-                                    ),
-                                    Positioned(
-                                      bottom: 0,
-                                      left: 0,
-                                      right: 0,
-                                      child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
-                                          child: Text(
-                                            'SILT',
-                                            style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
-                                            ),
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
+                          Image.asset(
+                            'assets/weather.png',
+                            fit: BoxFit.contain,
+                            width: 90,
                           ),
-                          SizedBox(height: 8.0),
-                          Container(
-                            height: 40.0,
-                            padding: EdgeInsets.only(bottom: 8.0),
-                            decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 20, 123, 35), // Changed the color
-                              borderRadius: BorderRadius.circular(20.0), // Added border radius
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            '30°C',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 56,
                             ),
-                            child: Center(
-                              child: Text(
-                                'OTHERS',
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Image.asset(
+                            'assets/wind.png',
+                            fit: BoxFit.contain,
+                            width: 50,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                '2km/h',
                                 style: TextStyle(
-                                  color: Colors.white, // Changed text color to white
-                                  fontWeight: FontWeight.bold, // Made text bold
-                                  fontSize: 22.0, // Adjusted font size
+                                  color: Colors.black,
+                                  fontSize: 24,
                                 ),
                               ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.18, // Position the grey line just above the second positioned container
-              left: 20.0,
-              right: 20.0,
-              child: Container(
-                height: 1.0, // Height of the grey line
-                color: const Color.fromARGB(255, 236,237,239), // Color of the grey line
-              ),
-            ),
-            Positioned(
-              bottom: 10.0,
-              left: 0,
-              right: 0,
-              child: Container( // Container C3
-                padding: EdgeInsets.symmetric(horizontal: 20.0), // Horizontal padding for C3
-                height: MediaQuery.of(context).size.height * 0.15, // Height of C3
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.125, // Width of left container in C3
-                      height: 120.0,
-                      child: Image.asset(
-                        'assets/Lightbulb.png',
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            'How to Prepare Soil for Planting?', // Text for top part of C3
-                            style: TextStyle(fontSize: 19.0),
-                          ),
-                          SizedBox(height: 1.0), // Add space between "Up" and "Down" texts
-                          Text(
-                            'Loosen soil, amend with compost, and remove debris.', // Text for bottom part of C3
-                            style: TextStyle(fontSize: 12.0, color: Colors.grey), // Text style for "Down" text
-                          ),
-                          SizedBox(height: 5.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.pushNamed(context, '/soil_prepare');
-                                },
-                                child: Container(
-                                  padding: EdgeInsets.fromLTRB(8.0, 5.0, 8.0, 5.0),
-                                  decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 7, 175, 107),
-                                    borderRadius: BorderRadius.circular(20.0),
-                                  ),
-                                  child: Text(
-                                    'LEARN MORE',
-                                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0),
-                                  ),
+                              Text(
+                                'Wind Speed',
+                                style: TextStyle(
+                                  color: Colors.grey[600],
+                                  fontSize: 12,
                                 ),
                               ),
                             ],
                           ),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          Image.asset(
+                            'assets/humidity.png',
+                            fit: BoxFit.contain,
+                            width: 50,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Column(
+                            children: <Widget>[
+                              Text(
+                                '50%',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontSize: 24,
+                                ),
+                              ),
+                              Text(
+                                'Humidity',
+                                style: TextStyle(
+                                  color: Colors.grey[600],
+                                  fontSize: 12,
+                                ),
+                              ),
+                            ],
+                          )
                         ],
                       ),
-                    ),
-                  ],
+                      SizedBox(
+                        height: 20,
+                      ),
+                      plainCard(
+                        borderColor: 'blue',
+                        borderWidth: 3.0,
+                        bgColor: 'white',
+                        img: 'thunder.png',
+                        title: 'Expected Thunderstorm @ 4pm',
+                        content: 'You should stake small and young trees!',
+                        showProgressBar: false,
+                      ),
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Padding(
+                          padding: const EdgeInsets.only(left: 20.0),
+                          child: Text(
+                            'Your Crops',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      plainCard(
+                        borderColor: 'blue',
+                        borderWidth: 1.0,
+                        bgColor: 'green',
+                        img: 'tomato.jpeg',
+                        title: 'Tomato',
+                        content: 'Current: Seeding Stage',
+                        showProgressBar: true,
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(25.0, 0, 25.0, 11),
+                        child: Divider(
+                          color: Colors.black,
+                        ),
+                      ),
+                      arrowCard(
+                        img: 'plant_home.png',
+                        title: 'Start Planting',
+                        content: 'Follow step-by-step guide to plan your planting!',
+                        nav: '/soil',
+                      ),
+                      arrowCard(
+                        img: 'pest_home.png',
+                        title: 'Pest Management',
+                        content: 'Follow step-by-step guideline to check your crops\' health condition.',
+                        nav: '/soil',
+                      ),
+                      arrowCard(
+                        img: 'news.png',
+                        title: '[12/3/2024]Tomato Disease',
+                        content: 'Early blight disease reported in tomato crops in Penang.',
+                        nav: '/soil',
+                      ),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
-        ),
-      ),
+            )
+          );
+        }
+      }
     );
   }
 }
