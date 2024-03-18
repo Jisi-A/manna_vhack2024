@@ -9,6 +9,7 @@ import 'package:manna_vhack2024/pages/marketplace.dart';
 import 'package:manna_vhack2024/pages/claysoil.dart';
 import 'package:manna_vhack2024/pages/soil_prepare.dart';
 import 'package:manna_vhack2024/pages/pest_management.dart';
+import 'package:manna_vhack2024/pages/pests_diseases.dart'; 
 
 //first default page is home page
 void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
@@ -20,4 +21,5 @@ void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
       '/clay': (context) => claysoil(),
       '/soil_prepare': (context) => soil_prepare(),
       '/pest_management': (context) => pest_management(),
+      '/pests_diseases': (context) => pests_diseases(),
     }));
