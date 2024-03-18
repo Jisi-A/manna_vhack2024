@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
+import 'package:manna_vhack2024/components/marketplace_cate.dart';
 
 class marketplace extends StatefulWidget {
   @override
@@ -114,8 +115,10 @@ class HorizontalCardList extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        print('Card tapped!');
-        // Add your onTap function here
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => marketplace_cate()),
+        );
       },
       child: Card(
         child: Row(
