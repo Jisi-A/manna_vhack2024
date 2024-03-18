@@ -12,6 +12,7 @@ import 'package:manna_vhack2024/pages/soil_prepare.dart';
 import 'package:manna_vhack2024/pages/pest_management.dart';
 import 'package:manna_vhack2024/pages/pests_diseases.dart'; 
 import 'package:manna_vhack2024/pages/pests_diseases_tomato.dart'; 
+import 'package:manna_vhack2024/pages/pests_diseases_tomato_learn_more.dart'; 
 
 //first default page is home page
 void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
@@ -26,4 +27,5 @@ void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
       '/pest_management': (context) => pest_management(),
       '/pests_diseases': (context) => pests_diseases(),
       '/pests_diseases_tomato': (context) => pests_diseases_tomato(),
+      '/pests_diseases_tomato_learn_more': (context) => pests_diseases_tomato_learn_more(),
     }));
