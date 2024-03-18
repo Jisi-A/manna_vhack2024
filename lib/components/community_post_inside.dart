@@ -89,10 +89,162 @@ class CommunityPostInside extends StatelessWidget {
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        'I got my plant a new pot and it looks so much better now!',
-                        style: TextStyle(fontSize: 18),
+                        'Last weekend, I went to find a new pot for my beloved fern. The journey led me to a quaint little garden store in the heart of the city, known for its unique collection of gardening supplies. The pot was not only aesthetically pleasing but also practical. Its size was perfect for my fern, providing ample space for the roots to grow. The pot also had a drainage hole at the bottom, a crucial feature to prevent waterlogging and root rot. I chose this pot because it met all my requirements - it was functional, beautiful, and reasonably priced. The satisfaction I felt was immense. Not only had I found a pot that catered to my plant’s needs, but I had also added a touch of beauty to my living space!',
+                        style: TextStyle(fontSize: 15),
                       ),
                     ),
+                  ),
+                ),
+                Row(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          '35 Comments',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18, // Set the desired font size here
+                          ),
+                        ),
+                      ),
+                    ),
+                    Spacer(),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: TextButton(
+                        onPressed: () {
+                          // Add your hyperlink logic here
+                        },
+                        child: Text(
+                          'View all',
+                          style: TextStyle(
+                            color: Colors.blue,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    )
+                  ],
+                ),
+                Container(
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.fromLTRB(5, 0, 0, 5),
+                        child: CircleAvatar(
+                          backgroundImage: AssetImage('$avatarImage'),
+                          radius: 35,
+                        ),
+                      ),
+                      Expanded(
+                        child: Container(
+                          child: Column(
+                            children: [
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Container(
+                                  padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                  child: Text(
+                                    '$name',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      color: Colors.grey[800],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                              Align(
+                                alignment: Alignment.centerLeft,
+                                child: Container(
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                    child: Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        'Looking good!',
+                                        style: TextStyle(fontSize: 15),
+                                      ),
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ), // add this line
+                      Container(
+                        child: Expanded(
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.end,
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                  child: Text(
+                                    '12',
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                    ),
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.thumb_up,
+                                  size: 20,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    children: [
+                      CircleAvatar(
+                        backgroundImage: AssetImage('assets/avatar.png'),
+                        radius: 35,
+                      ),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: OutlineInputBorder(),
+                            labelText: 'Leave a comment',
+                            labelStyle: TextStyle(
+                              fontSize: 12,
+                            ), // Decreased the font size to 12
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Container(
+                              padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
+                              child: Text(
+                                '3.6k',
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                            ),
+                            Icon(
+                              Icons.thumb_up,
+                              size: 15,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ],
