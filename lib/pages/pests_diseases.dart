@@ -64,7 +64,12 @@ class _pests_diseasesState extends State<pests_diseases> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildCircleAvatarWithText('assets/tomato.jpeg', 'TOMATO'),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, '/pests_diseases_tomato');
+                  },
+                  child: _buildCircleAvatarWithText('assets/tomato.jpeg', 'TOMATO'),
+                ),
                 _buildCircleAvatarWithText('assets/bean.jpg', 'BEAN'),
               ],
             ),
