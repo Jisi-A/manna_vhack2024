@@ -12,7 +12,7 @@ class CommunityPost extends StatelessWidget {
     this.postImage = 'assets/plant.png',
     this.avatarImage = 'assets/girl.jpeg',
     this.title = 'Got my plant a new pot!',
-    this.name = 'Ru Qian Chow',
+    this.name = 'Chow Qian Ru',
   });
 
   @override
@@ -65,6 +65,7 @@ class CommunityPost extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
+                    height: 1.5, // Adjust the line spacing here
                   ),
                 ),
               ),

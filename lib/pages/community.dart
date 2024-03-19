@@ -60,12 +60,28 @@ class _communityState extends State<community> {
                   children: [
                     CommunityPost(),
                     CommunityPost(
-                        postImage: 'assets/tomato.jpg',
-                        name: "Chow Qian Qian",
-                        title: "My tomato plant is growing well!"),
-                    CommunityPost(),
-                    CommunityPost(),
-                    CommunityPost(),
+                      postImage: 'assets/tomato.jpg',
+                      name: "Chow Qian Qian",
+                      title: "My tomato plant is growing well!",
+                      avatarImage: "assets/avatar4.jpeg",
+                    ),
+                    CommunityPost(
+                        name: 'Alex',
+                        title:
+                            "This is why you shouldn't put your coffee ground",
+                        postImage: 'assets/coffee_ground.jpeg',
+                        avatarImage: 'assets/avatar2.jpg'),
+                    CommunityPost(
+                        name: 'Ang Chin Zhen',
+                        title: 'Cucumber flaccid :( ',
+                        postImage: 'assets/rot_cucumber.jpg',
+                        avatarImage: 'assets/avatar3.jpg'),
+                    CommunityPost(
+                      name: "Lai Yicheng",
+                      title: "The topiary garden in midsummer 2023",
+                      postImage: "assets/garden.jpeg",
+                      avatarImage: "assets/avatar_yc.jpeg",
+                    ),
                   ],
                 ),
               ],
