@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:manna_vhack2024/components/marketplace_cart.dart';
-import 'package:manna_vhack2024/components/marketplace_pay.dart';
 import 'package:manna_vhack2024/components/marketplace_prod.dart';
 
 class marketplace_cate extends StatefulWidget {
+  const marketplace_cate({super.key});
+
   @override
   State<marketplace_cate> createState() => _marketplace_cateState();
 }
@@ -15,41 +14,34 @@ class _marketplace_cateState extends State<marketplace_cate> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(children: [
-        Padding(
-          padding:
-              EdgeInsets.only(top: 30), // Adjust the top padding value here
-          child: Row(
-            children: [
-              BackButton(
-                color: Colors.black,
-              ),
-              Expanded(
-                child: SearchBar(),
-              ),
-              IconButton(
-                icon: Icon(Icons.shopping_cart),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) =>
-                            MarketplaceCart()), // Replace NewPage with the class of your new page
-                  );
-                },
-              ),
-              IconButton(
-                icon: Icon(Icons.forum),
-                onPressed: () {},
-              )
-            ],
-          ),
+        Row(
+          children: [
+            const BackButton(
+              color: Colors.black,
+            ),
+            const Expanded(
+              child: SearchBar(),
+            ),
+            IconButton(
+              icon: const Icon(Icons.shopping_cart),
+              onPressed: () {
+                // Add your onPressed function here
+              },
+            ),
+            IconButton(
+              icon: const Icon(Icons.forum),
+              onPressed: () {
+                // Add your onPressed function here
+              },
+            )
+          ],
         ),
         GridView.count(
             shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             crossAxisCount: 2,
             childAspectRatio: 0.7,
-            children: [
+            children: const [
               productCard(),
               productCard(),
               productCard(),
@@ -62,17 +54,19 @@ class _marketplace_cateState extends State<marketplace_cate> {
 }
 
 class SearchBar extends StatelessWidget {
+  const SearchBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: TextField(
         decoration: InputDecoration(
           labelText: 'Search',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          prefixIcon: Icon(Icons.search),
+          prefixIcon: const Icon(Icons.search),
         ),
       ),
     );

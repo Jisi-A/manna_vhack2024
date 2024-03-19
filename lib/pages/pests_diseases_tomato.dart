@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class pests_diseases_tomato extends StatefulWidget {
+  const pests_diseases_tomato({super.key});
+
   @override
   State<pests_diseases_tomato> createState() => _pests_diseases_tomatoState();
 }
@@ -12,12 +14,12 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerLeft,
           child: Text('Tomato'),
         ),
         centerTitle: false,
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: Colors.black,
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w700,
@@ -30,8 +32,8 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(20.0),
+            const Padding(
+              padding: EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,10 +54,10 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             // Seedling Stage
             _buildStageRow('Seedling Stage', 'assets/seedling_stage.png'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -63,7 +65,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/aphids.png', 'Aphids', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -71,12 +73,12 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/thrips.jpg', 'Thrips', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildLearnMoreButton('/pests_diseases_tomato_learn_more'),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             // Vegetative Stage
             _buildStageRow('Vegetative Stage', 'assets/vegetative_stage.png'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -84,7 +86,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/aphids.png', 'Aphids', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -92,12 +94,12 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/thrips.jpg', 'Thrips', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildLearnMoreButton('/pests_diseases_another_stage'),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             // Flowering Stage
             _buildStageRow('Flowering Stage', 'assets/flowering_stage.png'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -105,7 +107,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/aphids.png', 'Aphids', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -113,12 +115,12 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/thrips.jpg', 'Thrips', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildLearnMoreButton('/pests_diseases_another_stage'),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             // Fruiting Stage
             _buildStageRow('Fruiting Stage', 'assets/fruiting_stage.png'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -126,7 +128,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/aphids.png', 'Aphids', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -134,12 +136,12 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/thrips.jpg', 'Thrips', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildLearnMoreButton('/pests_diseases_another_stage'),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
             // Harvesting Stage
             _buildStageRow('Harvesting Stage', 'assets/harvesting_stage.png'),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -147,7 +149,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/aphids.png', 'Aphids', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -155,9 +157,9 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                 _buildContainer('assets/thrips.jpg', 'Thrips', 'Insects (Pests)', '/clay'),
               ],
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildLearnMoreButton('/pests_diseases_another_stage'),
-            SizedBox(height: 40),
+            const SizedBox(height: 40),
           ],
         ),
       ),
@@ -182,10 +184,10 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
               backgroundImage: AssetImage(imagePath),
             ),
           ),
-          SizedBox(width: 10),
+          const SizedBox(width: 10),
           Text(
             stage,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 22,
             ),
@@ -210,7 +212,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
               color: Colors.grey.withOpacity(0.5),
               spreadRadius: 3,
               blurRadius: 7,
-              offset: Offset(0, 3),
+              offset: const Offset(0, 3),
             ),
           ],
           border: Border.all(
@@ -234,10 +236,10 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
               right: 0,
               bottom: 0,
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.75),
-                  borderRadius: BorderRadius.only(
+                  borderRadius: const BorderRadius.only(
                     bottomLeft: Radius.circular(20),
                     bottomRight: Radius.circular(20),
                   ),
@@ -247,14 +249,14 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
                   children: [
                     Text(
                       topText,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 18,
                       ),
                     ),
                     Text(
                       bottomText,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14,
                       ),
                     ),
@@ -274,23 +276,23 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
         onPressed: () {
           Navigator.pushNamed(context, nextPage);
         },
-        child: Text(
-          'LEARN MORE',
-          style: TextStyle(
-            color: Colors.white, // Text color
-          ),
-        ),
         style: ElevatedButton.styleFrom(
-          padding: EdgeInsets.symmetric(horizontal: 30, vertical: 15),
+          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20),
-            side: BorderSide(
-              color: const Color.fromARGB(255, 90, 213, 163), // Border color
+            side: const BorderSide(
+              color: Color.fromARGB(255, 90, 213, 163), // Border color
               width: 2, // Border width
             ),
           ),
           elevation: 5,
           backgroundColor: const Color.fromARGB(255, 4, 106, 65), // Button color
+        ),
+        child: const Text(
+          'LEARN MORE',
+          style: TextStyle(
+            color: Colors.white, // Text color
+          ),
         ),
       ),
     );

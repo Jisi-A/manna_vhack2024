@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CommunityPostInside extends StatelessWidget {
   final String postImage;
@@ -8,7 +6,7 @@ class CommunityPostInside extends StatelessWidget {
   final String title;
   final String name;
 
-  CommunityPostInside({
+  const CommunityPostInside({super.key, 
     this.postImage = 'assets/plant.png',
     this.avatarImage = 'assets/girl.jpeg',
     this.title = 'Got my plant a new pot!',
@@ -23,10 +21,10 @@ class CommunityPostInside extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: 25,
-                backgroundImage: AssetImage('$avatarImage'),
+                backgroundImage: AssetImage(avatarImage),
               ),
-              SizedBox(width: 5),
-              Text('$name', style: TextStyle(fontSize: 15)),
+              const SizedBox(width: 5),
+              Text(name, style: const TextStyle(fontSize: 15)),
             ],
           ),
           actions: [
@@ -34,16 +32,16 @@ class CommunityPostInside extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
               child: ElevatedButton(
                 onPressed: () {},
-                child: Text(
-                  "Follow",
-                  style: TextStyle(
-                    color: const Color.fromARGB(255, 20, 50, 103),
+                style: ElevatedButton.styleFrom(
+                  side: const BorderSide(
+                    color: Color.fromARGB(255, 20, 50, 103),
+                    width: 2.0,
                   ),
                 ),
-                style: ElevatedButton.styleFrom(
-                  side: BorderSide(
-                    color: const Color.fromARGB(255, 20, 50, 103),
-                    width: 2.0,
+                child: const Text(
+                  "Follow",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 20, 50, 103),
                   ),
                 ),
               ),
@@ -62,7 +60,7 @@ class CommunityPostInside extends StatelessWidget {
                         child: Container(
                           color: Colors.grey[300],
                           child: Image.asset(
-                            '$postImage',
+                            postImage,
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -72,20 +70,22 @@ class CommunityPostInside extends StatelessWidget {
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
                         '$title',
                         style: TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            height: 1),
                       ),
                     ),
                   ),
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -97,8 +97,8 @@ class CommunityPostInside extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    const Padding(
+                      padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -110,14 +110,14 @@ class CommunityPostInside extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Spacer(),
+                    const Spacer(),
                     Align(
                       alignment: Alignment.centerRight,
                       child: TextButton(
                         onPressed: () {
                           // Add your hyperlink logic here
                         },
-                        child: Text(
+                        child: const Text(
                           'View all',
                           style: TextStyle(
                             color: Colors.blue,
@@ -134,7 +134,8 @@ class CommunityPostInside extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 5),
                         child: CircleAvatar(
-                          backgroundImage: AssetImage('$avatarImage'),
+                          backgroundImage:
+                              AssetImage('assets/avatar_comment.jpeg'),
                           radius: 35,
                         ),
                       ),
@@ -145,9 +146,9 @@ class CommunityPostInside extends StatelessWidget {
                               Align(
                                 alignment: Alignment.centerLeft,
                                 child: Container(
-                                  padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                                   child: Text(
-                                    '$name',
+                                    'Jonas Brothers',
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: Colors.grey[800],
@@ -158,9 +159,9 @@ class CommunityPostInside extends StatelessWidget {
                               Align(
                                 alignment: Alignment.centerLeft,
                                 child: Container(
-                                  child: Padding(
+                                  child: const Padding(
                                     padding:
-                                        const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                                        EdgeInsets.fromLTRB(10, 0, 0, 0),
                                     child: Align(
                                       alignment: Alignment.centerLeft,
                                       child: Text(
@@ -178,20 +179,20 @@ class CommunityPostInside extends StatelessWidget {
                       Container(
                         child: Expanded(
                           child: Container(
-                            padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                            padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
                                 Container(
-                                  padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                                  child: Text(
+                                  padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                                  child: const Text(
                                     '12',
                                     style: TextStyle(
                                       fontSize: 12,
                                     ),
                                   ),
                                 ),
-                                Icon(
+                                const Icon(
                                   Icons.thumb_up,
                                   size: 20,
                                 ),
@@ -203,16 +204,16 @@ class CommunityPostInside extends StatelessWidget {
                     ],
                   ),
                 ),
-                Divider(),
+                const Divider(),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Row(
                     children: [
-                      CircleAvatar(
+                      const CircleAvatar(
                         backgroundImage: AssetImage('assets/avatar.png'),
                         radius: 35,
                       ),
-                      Expanded(
+                      const Expanded(
                         child: TextField(
                           decoration: InputDecoration(
                             border: OutlineInputBorder(),
@@ -224,20 +225,20 @@ class CommunityPostInside extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                        padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
                           children: [
                             Container(
-                              padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                              child: Text(
+                              padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                              child: const Text(
                                 '3.6k',
                                 style: TextStyle(
                                   fontSize: 15,
                                 ),
                               ),
                             ),
-                            Icon(
+                            const Icon(
                               Icons.thumb_up,
                               size: 15,
                             ),

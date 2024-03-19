@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class plainCard extends StatelessWidget {
   plainCard({
-    Key? key,
+    super.key,
     required this.borderColor,
     required this.borderWidth,
     required this.bgColor,
@@ -10,7 +10,7 @@ class plainCard extends StatelessWidget {
     required this.title,
     required this.content,
     required this.showProgressBar
-  }) : super(key: key);
+  });
 
   final String borderColor, bgColor, img, title, content;
   final double borderWidth;
@@ -18,9 +18,9 @@ class plainCard extends StatelessWidget {
 
   // Define a map of color names to Color objects
   final Map<String, Color> colorMap = {
-    'blue': Color.fromRGBO(48, 91, 187, 1),
+    'blue': const Color.fromRGBO(48, 91, 187, 1),
     'white': Colors.white,
-    'green': Color.fromRGBO(57, 205, 145, 1),
+    'green': const Color.fromRGBO(57, 205, 145, 1),
   };
 
   @override
@@ -57,7 +57,7 @@ class plainCard extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 20,
               ),
               Expanded(
@@ -67,13 +67,13 @@ class plainCard extends StatelessWidget {
                   children: <Widget>[
                     Text(
                       title,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     if (showProgressBar) ...[
-                    SizedBox(
+                    const SizedBox(
                       height: 5.0,
                     ),
                     SizedBox(
@@ -84,13 +84,13 @@ class plainCard extends StatelessWidget {
                         valueColor: AlwaysStoppedAnimation<Color>(Colors.blue[900]!),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 5.0,
                     ),
                     ],
                     Text(
                       content,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 15,
                       ),
                     ),

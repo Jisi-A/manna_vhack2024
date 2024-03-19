@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
 
 class account extends StatefulWidget {
+  const account({super.key});
+
   @override
   State<account> createState() => _accountState();
 }
@@ -9,7 +11,7 @@ class account extends StatefulWidget {
 class _accountState extends State<account> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       appBar: TAppBar(
         title: 'Account',
         isIcon: true,

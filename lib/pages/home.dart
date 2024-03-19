@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'dart:convert';
 import 'package:intl/intl.dart';
 import 'package:http/http.dart';
@@ -7,6 +6,8 @@ import 'package:manna_vhack2024/components/plainCard.dart';
 import 'package:manna_vhack2024/components/arrowCard.dart';
 
 class home extends StatefulWidget {
+  const home({super.key});
+
   @override
   State<home> createState() => _homeState();
 }
@@ -56,14 +57,14 @@ class _homeState extends State<home> {
       future: getTime(),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return CircularProgressIndicator(); // Show loading spinner while waiting
+          return const CircularProgressIndicator(); // Show loading spinner while waiting
         } else if (snapshot.error != null) {
           return Text('Error: ${snapshot.error}'); // Show error message if something went wrong
         } else {
           return Scaffold(
             body: SingleChildScrollView(
               child: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
@@ -76,12 +77,12 @@ class _homeState extends State<home> {
                 child: Center(
                   child: Column(
                     children: <Widget>[
-                      SizedBox(
+                      const SizedBox(
                         height: 60,
                       ),
                       Text(
                         formattedDate,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontSize: 28,
                         ),
@@ -93,23 +94,23 @@ class _homeState extends State<home> {
                           fontSize: 20,
                         ),
                       ), 
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Text(
                         time,
-                        style: TextStyle(
+                        style: const TextStyle(
                           color: Colors.black,
                           fontSize: 48,
                         ),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 10,
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: <Widget>[
-                          SizedBox(
+                          const SizedBox(
                             width: 65,
                           ),
                           Image.asset(
@@ -117,10 +118,10 @@ class _homeState extends State<home> {
                             fit: BoxFit.contain,
                             width: 90,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
-                          Text(
+                          const Text(
                             '30°C',
                             style: TextStyle(
                               color: Colors.black,
@@ -129,7 +130,7 @@ class _homeState extends State<home> {
                           ),
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       Row(
@@ -140,12 +141,12 @@ class _homeState extends State<home> {
                             fit: BoxFit.contain,
                             width: 50,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
                             children: <Widget>[
-                              Text(
+                              const Text(
                                 '2km/h',
                                 style: TextStyle(
                                   color: Colors.black,
@@ -161,7 +162,7 @@ class _homeState extends State<home> {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 20,
                           ),
                           Image.asset(
@@ -169,12 +170,12 @@ class _homeState extends State<home> {
                             fit: BoxFit.contain,
                             width: 50,
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Column(
                             children: <Widget>[
-                              Text(
+                              const Text(
                                 '50%',
                                 style: TextStyle(
                                   color: Colors.black,
@@ -192,7 +193,7 @@ class _homeState extends State<home> {
                           )
                         ],
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 20,
                       ),
                       plainCard(
@@ -204,10 +205,10 @@ class _homeState extends State<home> {
                         content: 'You should stake small and young trees!',
                         showProgressBar: false,
                       ),
-                      Align(
+                      const Align(
                         alignment: Alignment.centerLeft,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 20.0),
+                          padding: EdgeInsets.only(left: 20.0),
                           child: Text(
                             'Your Crops',
                             style: TextStyle(
@@ -227,25 +228,25 @@ class _homeState extends State<home> {
                         content: 'Current: Seeding Stage',
                         showProgressBar: true,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(25.0, 0, 25.0, 11),
+                      const Padding(
+                        padding: EdgeInsets.fromLTRB(25.0, 0, 25.0, 11),
                         child: Divider(
                           color: Colors.black,
                         ),
                       ),
-                      arrowCard(
+                      const arrowCard(
                         img: 'plant_home.png',
                         title: 'Start Planting',
                         content: 'Follow step-by-step guide to plan your planting!',
                         nav: '/soil',
                       ),
-                      arrowCard(
+                      const arrowCard(
                         img: 'pest_home.png',
                         title: 'Pest Management',
                         content: 'Follow step-by-step guideline to check your crops\' health condition.',
                         nav: '/soil',
                       ),
-                      arrowCard(
+                      const arrowCard(
                         img: 'news.png',
                         title: '[12/3/2024]Tomato Disease',
                         content: 'Early blight disease reported in tomato crops in Penang.',
