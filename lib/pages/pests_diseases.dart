@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class pests_diseases extends StatefulWidget {
+  const pests_diseases({super.key});
+
   @override
   State<pests_diseases> createState() => _pests_diseasesState();
 }
@@ -12,12 +14,12 @@ class _pests_diseasesState extends State<pests_diseases> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerLeft,
           child: Text('Pests & Diseases'),
         ),
         centerTitle: false,
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: Colors.black,
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w700,
@@ -30,8 +32,8 @@ class _pests_diseasesState extends State<pests_diseases> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(20.0),
+            const Padding(
+              padding: EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -52,7 +54,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 ],
               ),
             ),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -60,7 +62,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 _buildCircleAvatarWithText('assets/banana.jpg', 'BANANA'),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -73,7 +75,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 _buildCircleAvatarWithText('assets/bean.jpg', 'BEAN'),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -81,7 +83,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 _buildCircleAvatarWithText('assets/wheat.jpg', 'WHEAT'),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -89,7 +91,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 _buildCircleAvatarWithText('assets/pineapple.png', 'PINEAPPLE'),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -97,7 +99,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 _buildCircleAvatarWithText('assets/corn.jpg', 'CORN'),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -105,7 +107,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 _buildCircleAvatarWithText('assets/grape.jpg', 'GRAPE'),
               ],
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
@@ -137,7 +139,7 @@ class _pests_diseasesState extends State<pests_diseases> {
                 color: Colors.grey.withOpacity(0.5),
                 spreadRadius: 3,
                 blurRadius: 7,
-                offset: Offset(0, 3), // changes position of shadow
+                offset: const Offset(0, 3), // changes position of shadow
               ),
             ],
           ),
@@ -146,11 +148,11 @@ class _pests_diseasesState extends State<pests_diseases> {
             backgroundImage: AssetImage(imageCrop),
           ),
         ),
-        SizedBox(height: 5),
+        const SizedBox(height: 5),
         Text(
           text,
           textAlign: TextAlign.center,
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 22,
           ),

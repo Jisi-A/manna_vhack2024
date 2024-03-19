@@ -15,11 +15,11 @@ class botNavBar extends StatefulWidget {
 class _botNavBarState extends State<botNavBar> {
   int selectedPage = 0;
   final List<Widget> _pageOptions = [
-    home(),
-    community(),
-    ai_assistant(),
-    marketplace(),
-    account()
+    const home(),
+    const community(),
+    const ai_assistant(),
+    const marketplace(),
+    const account()
   ];
 
   @override

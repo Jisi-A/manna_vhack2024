@@ -1,12 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
 import 'package:manna_vhack2024/components/community_post.dart';
 
 class community extends StatefulWidget {
+  const community({super.key});
+
   @override
   State<community> createState() => _communityState();
 }
@@ -57,7 +57,7 @@ class _communityState extends State<community> {
                   physics: NeverScrollableScrollPhysics(),
                   crossAxisCount: 2,
                   childAspectRatio: 0.7,
-                  children: [
+                  children: const [
                     CommunityPost(),
                     CommunityPost(
                       postImage: 'assets/tomato.jpg',

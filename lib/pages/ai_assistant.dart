@@ -1,10 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
 import 'package:manna_vhack2024/pages/human_professional.dart';
 
 class ai_assistant extends StatefulWidget {
+  const ai_assistant({super.key});
+
   @override
   State<ai_assistant> createState() => _ai_assistantState();
 }

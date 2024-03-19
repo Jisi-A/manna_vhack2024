@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:manna_vhack2024/components/custom_appbar.dart';
 import 'package:manna_vhack2024/components/botNavBar.dart';
 import 'package:manna_vhack2024/pages/account.dart';
-import 'package:manna_vhack2024/pages/home.dart';
+import 'package:manna_vhack2024/pages/login.dart';
 import 'package:manna_vhack2024/pages/community.dart';
 import 'package:manna_vhack2024/pages/ai_assistant.dart';
 import 'package:manna_vhack2024/pages/marketplace.dart';
@@ -15,17 +14,18 @@ import 'package:manna_vhack2024/pages/pests_diseases_tomato.dart';
 import 'package:manna_vhack2024/pages/pests_diseases_tomato_learn_more.dart'; 
 
 //first default page is home page
-void main() => runApp(MaterialApp(initialRoute: '/home', routes: {
-      '/home': (context) => botNavBar(),
-      '/community': (context) => community(),
-      '/ai_assistant': (context) => ai_assistant(),
-      '/marketplace': (context) => marketplace(),
-      '/account': (context) => account(),
-      '/soil': (context) => soil(),
-      '/clay': (context) => claysoil(),
-      '/soil_prepare': (context) => soil_prepare(),
-      '/pest_management': (context) => pest_management(),
-      '/pests_diseases': (context) => pests_diseases(),
-      '/pests_diseases_tomato': (context) => pests_diseases_tomato(),
-      '/pests_diseases_tomato_learn_more': (context) => pests_diseases_tomato_learn_more(),
+void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
+      '/login': (context) => const login(),
+      '/home': (context) => const botNavBar(),
+      '/community': (context) => const community(),
+      '/ai_assistant': (context) => const ai_assistant(),
+      '/marketplace': (context) => const marketplace(),
+      '/account': (context) => const account(),
+      '/soil': (context) => const soil(),
+      '/clay': (context) => const claysoil(),
+      '/soil_prepare': (context) => const soil_prepare(),
+      '/pest_management': (context) => const pest_management(),
+      '/pests_diseases': (context) => const pests_diseases(),
+      '/pests_diseases_tomato': (context) => const pests_diseases_tomato(),
+      '/pests_diseases_tomato_learn_more': (context) => const pests_diseases_tomato_learn_more(),
     }));

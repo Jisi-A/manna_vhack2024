@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class claysoil extends StatefulWidget {
+  const claysoil({super.key});
+
   @override
   State<claysoil> createState() => _claysoilState();
 }
@@ -12,12 +14,12 @@ class _claysoilState extends State<claysoil> {
       backgroundColor: const Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 255, 255, 255),
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerLeft, // Align the text to the left
           child: Text('Clay Soil'),
         ),
         centerTitle: false, // Set to false to align the title to the left
-        titleTextStyle: TextStyle(
+        titleTextStyle: const TextStyle(
           color: Colors.black,
           fontFamily: 'Raleway',
           fontWeight: FontWeight.w700,
@@ -34,7 +36,7 @@ class _claysoilState extends State<claysoil> {
               child: Stack(
                 children: [
                   // Container C1
-                  Container(
+                  SizedBox(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height / 3,
                     child: Image.asset(
@@ -75,11 +77,11 @@ class _claysoilState extends State<claysoil> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 20.0),
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Center(
+                        const Center(
                           child: Text(
                             'What is Clay?',
                             style: TextStyle(
@@ -88,21 +90,21 @@ class _claysoilState extends State<claysoil> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 10.0),
-                        Text(
+                        const SizedBox(height: 10.0),
+                        const Text(
                           'Clay particles are very small and close together. Clay is dense and sticky. It holds water very well but it’s also very dense. When clay dries out, it becomes hard and difficult to till. Many plants struggle in clay because of its poor drainage and dense nature that make it difficult for roots to break through the soil.',
                           style: TextStyle(fontSize: 16.0),
                           textAlign: TextAlign.center, // Center the text horizontally
                         ),
-                        SizedBox(height: 20.0),
-                        Text(
+                        const SizedBox(height: 20.0),
+                        const Text(
                           'Suitable Crops for Clay Soil',
                           style: TextStyle(
                             fontSize: 18.0,
                             fontWeight: FontWeight.bold,
                           ),
                         ),
-                        SizedBox(height: 10.0),
+                        const SizedBox(height: 10.0),
                         // Images for suitable crops
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
@@ -110,14 +112,14 @@ class _claysoilState extends State<claysoil> {
                             children: [
                               // Replace these with your images
                               _buildImage('assets/broccoli.jpg'),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               _buildImage('assets/brussles_sprout.jpg'),
-                              SizedBox(width: 10),
+                              const SizedBox(width: 10),
                               _buildImage('assets/cabbage_nappa.jpg'),
                             ],
                           ),
                         ),
-                        SizedBox(height: 10.0),
+                        const SizedBox(height: 10.0),
                       ],
                     ),
                   ),
