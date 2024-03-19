@@ -61,7 +61,6 @@ class MarketplacePay extends StatelessWidget {
                     'Payment',
                     style: TextStyle(
                       fontSize: 20, // Adjust the font size here
-                      fontWeight: FontWeight.bold, // Make the text bold
                     ),
                   ),
                 ),
@@ -75,7 +74,6 @@ class MarketplacePay extends StatelessWidget {
                     'Delivery method',
                     style: TextStyle(
                       fontSize: 20, // Adjust the font size here
-                      fontWeight: FontWeight.bold, // Make the text bold
                     ),
                   ),
                 ),
@@ -89,7 +87,6 @@ class MarketplacePay extends StatelessWidget {
                     'Payment details',
                     style: TextStyle(
                       fontSize: 20, // Adjust the font size here
-                      fontWeight: FontWeight.bold, // Make the text bold
                     ),
                   ),
                 ),
