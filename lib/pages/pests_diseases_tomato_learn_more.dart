@@ -56,6 +56,18 @@ class _pests_diseases_tomato_learn_moreState extends State<pests_diseases_tomato
               _buildRow('assets/whiteflies.jpg', 'Whiteflies', 'Insects (Pests)'),
               _buildDivider(),
               _buildRow('assets/thrips.jpg', 'Thrips', 'Insects (Pests)'),
+              _buildDivider(),
+              _buildRow('assets/leaf_miners.jpg', 'Leaf Miners', 'Insects (Pests)'),
+              _buildDivider(),
+              _buildRow('assets/fusarium_wilt.png', 'Fusarium Wilt', 'Fungal (Disease)'),
+              _buildDivider(),
+              _buildRow('assets/verticillium_wilt.jpg', 'Verticillium Wilt', 'Fungal (Disease)'),
+              _buildDivider(),
+              _buildRow('assets/early_blight.jpeg', 'Early Blight', 'Fungal (Disease)'),
+              _buildDivider(),
+              _buildRow('assets/late_blight.jpg', 'Late Blight', 'Fungal (Disease)'),
+              _buildDivider(),
+              _buildRow('assets/bacterial_spot.jpg', 'Bacterial Spot', 'Bacterial (Disease)'),
             ],
           ),
         ),
@@ -64,54 +76,61 @@ class _pests_diseases_tomato_learn_moreState extends State<pests_diseases_tomato
   }
 
   Widget _buildRow(String imagePath, String topText, String bottomText) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 10),
-      child: Row(
-        children: [
-          SizedBox(
-            width: MediaQuery.of(context).size.width / 3,
-            height: 120.0, // Fixing the height of the image container
-            child: Container(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15), // Rounded corners
-                border: Border.all(
-                  color: Colors.black, // Border color
-                  width: 1, // Border width
+    return GestureDetector(
+      onTap: () {
+        if (imagePath == 'assets/damping_off.jpg') {
+          Navigator.pushNamed(context, '/pests_diseases_damping_off');
+        }
+      },
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 10),
+        child: Row(
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width / 3,
+              height: 120.0, // Fixing the height of the image container
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15), // Rounded corners
+                  border: Border.all(
+                    color: Colors.black, // Border color
+                    width: 1, // Border width
+                  ),
                 ),
-              ),
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: Image.asset(
-                  imagePath,
-                  fit: BoxFit.cover,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.asset(
+                    imagePath,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
             ),
-          ),
-          const SizedBox(width: 10),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  topText,
-                  style: const TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
+            SizedBox(width: 10),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    topText,
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 5),
-                Text(
-                  bottomText,
-                  style: const TextStyle(
-                    fontSize: 20,
+                  SizedBox(height: 5),
+                  Text(
+                    bottomText,
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const Icon(Icons.arrow_forward_ios_rounded),
-        ],
+            Icon(Icons.arrow_forward_ios_rounded),
+          ],
+        ),
       ),
     );
   }

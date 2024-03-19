@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manna_vhack2024/components/marketplace_cate.dart';
+import 'package:manna_vhack2024/components/marketplace_cart.dart';
 
 class marketplace extends StatefulWidget {
   const marketplace({super.key});
@@ -34,7 +35,9 @@ class _marketplaceState extends State<marketplace> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+        body: Padding(
+      padding: const EdgeInsets.only(top: 30),
+      child: Column(
         children: [
           Row(
             children: [
@@ -44,7 +47,12 @@ class _marketplaceState extends State<marketplace> {
               IconButton(
                 icon: const Icon(Icons.shopping_cart),
                 onPressed: () {
-                  // Add your onPressed function here
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MarketplaceCart()), // Replace NewPage with the class of your new page
+                  );
                 },
               ),
               IconButton(
@@ -78,7 +86,7 @@ class _marketplaceState extends State<marketplace> {
           ),
         ],
       ),
-    );
+    ));
   }
 }
 

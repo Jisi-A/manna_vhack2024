@@ -10,9 +10,10 @@ import 'package:manna_vhack2024/pages/soil.dart';
 import 'package:manna_vhack2024/pages/claysoil.dart';
 import 'package:manna_vhack2024/pages/soil_prepare.dart';
 import 'package:manna_vhack2024/pages/pest_management.dart';
-import 'package:manna_vhack2024/pages/pests_diseases.dart'; 
-import 'package:manna_vhack2024/pages/pests_diseases_tomato.dart'; 
-import 'package:manna_vhack2024/pages/pests_diseases_tomato_learn_more.dart'; 
+import 'package:manna_vhack2024/pages/pests_diseases.dart';
+import 'package:manna_vhack2024/pages/pests_diseases_tomato.dart';
+import 'package:manna_vhack2024/pages/pests_diseases_tomato_learn_more.dart';
+import 'package:manna_vhack2024/pages/pests_diseases_damping_off.dart';
 
 //first default page is home page
 void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
@@ -30,4 +31,5 @@ void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
       '/pests_diseases': (context) => const pests_diseases(),
       '/pests_diseases_tomato': (context) => const pests_diseases_tomato(),
       '/pests_diseases_tomato_learn_more': (context) => const pests_diseases_tomato_learn_more(),
+      '/pests_diseases_damping_off': (context) => pests_diseases_damping_off(),
     }));
