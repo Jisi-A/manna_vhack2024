@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
+import 'package:manna_vhack2024/pages/human_professional.dart';
 
 class ai_assistant extends StatefulWidget {
   @override
@@ -21,6 +22,37 @@ class _ai_assistantState extends State<ai_assistant> {
             padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
             child: Column(
               children: [
+                SizedBox(
+                  height: 20,
+                ),
+                Align(
+                  alignment: AlignmentDirectional.bottomStart,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => HumanProfessional()),
+                      );
+                    },
+                    child: Text(
+                      "Human Professional",
+                      style: TextStyle(
+                        color: Colors.white,
+                      ),
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: const Color.fromARGB(255, 20, 38, 79),
+                      side: BorderSide(
+                        color: const Color.fromARGB(255, 20, 38, 79),
+                        width: 2.0,
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 20,
+                ),
                 Row(
                   children: [
                     CircleAvatar(
@@ -109,6 +141,9 @@ class _ai_assistantState extends State<ai_assistant> {
                           ),
                         ),
                       ),
+                      SizedBox(
+                        width: 5,
+                      ),
                       ElevatedButton(
                         onPressed: () {},
                         child: Text(
@@ -125,6 +160,9 @@ class _ai_assistantState extends State<ai_assistant> {
                             width: 2, // Set the border width
                           ),
                         ),
+                      ),
+                      SizedBox(
+                        width: 5,
                       ),
                       ElevatedButton(
                         onPressed: () {},
