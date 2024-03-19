@@ -12,7 +12,7 @@ class ai_assistant extends StatefulWidget {
 class _ai_assistantState extends State<ai_assistant> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         appBar: TAppBar(
           title: 'AI Expert',
           isIcon: true,
