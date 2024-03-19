@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:manna_vhack2024/components/marketplace_pay.dart';
 
 class MarketplaceCart extends StatelessWidget {
   final String postImage;
@@ -103,7 +104,12 @@ class MarketplaceCart extends StatelessWidget {
               children: <Widget>[
                 TextButton(
                   onPressed: () {
-                    // Add your onPressed function here
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) =>
+                              MarketplacePay()), // Replace NewPage with the class of your new page
+                    );
                   },
                   child: Padding(
                     padding: EdgeInsets.all(8.0), // Adjust the padding here

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:manna_vhack2024/components/marketplace_cart.dart';
 
 class MarketplacePay extends StatelessWidget {
   final String postImage;
@@ -29,7 +30,12 @@ class MarketplacePay extends StatelessWidget {
                     IconButton(
                       icon: Icon(Icons.shopping_cart),
                       onPressed: () {
-                        // Add your onPressed function here
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  MarketplaceCart()), // Replace NewPage with the class of your new page
+                        );
                       },
                     ),
                     IconButton(
