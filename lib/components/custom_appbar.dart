@@ -14,11 +14,11 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
               'assets/Original_Logo_no_bg.png',
               fit: BoxFit.contain,
             )
-          : BackButton(
+          : const BackButton(
               color: Colors.black,
             ),
       title: Text(title),
-      titleTextStyle: TextStyle(
+      titleTextStyle: const TextStyle(
         color: Colors.black,
         fontFamily: 'Raleway',
         fontWeight: FontWeight.w700,
@@ -30,5 +30,5 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

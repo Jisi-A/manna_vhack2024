@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:manna_vhack2024/components/community_post_inside.dart';
 
 class CommunityPost extends StatelessWidget {
@@ -8,7 +7,7 @@ class CommunityPost extends StatelessWidget {
   final String title;
   final String name;
 
-  CommunityPost({
+  const CommunityPost({super.key, 
     this.postImage = 'assets/plant.png',
     this.avatarImage = 'assets/girl.jpeg',
     this.title = 'Got my plant a new pot!',
@@ -30,7 +29,7 @@ class CommunityPost extends StatelessWidget {
         );
       },
       child: Container(
-        margin: EdgeInsets.all(5),
+        margin: const EdgeInsets.all(5),
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.black,
@@ -45,31 +44,31 @@ class CommunityPost extends StatelessWidget {
                 color: Colors.grey[300],
                 borderRadius: BorderRadius.circular(10),
               ),
-              child: Container(
+              child: SizedBox(
                 width: double
                     .infinity, // Set the width to occupy the entire available space // Set the desired height for the image
                 height: 170,
                 child: Image.asset(
-                  '$postImage',
+                  postImage,
                   fit: BoxFit.cover,
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Container(
               alignment: Alignment.centerLeft,
               child: Padding(
                 padding: const EdgeInsets.fromLTRB(5, 0, 4, 8),
                 child: Text(
-                  '$title',
-                  style: TextStyle(
+                  title,
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14,
                   ),
                 ),
               ),
             ),
-            Spacer(),
+            const Spacer(),
             Align(
               alignment: Alignment.bottomCenter,
               child: Row(
@@ -77,35 +76,35 @@ class CommunityPost extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.fromLTRB(5, 0, 0, 5),
                     child: CircleAvatar(
-                      backgroundImage: AssetImage('$avatarImage'),
+                      backgroundImage: AssetImage(avatarImage),
                       radius: 20,
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.fromLTRB(5, 0, 0, 0),
+                    padding: const EdgeInsets.fromLTRB(5, 0, 0, 0),
                     child: Text(
-                      '$name',
-                      style: TextStyle(
+                      name,
+                      style: const TextStyle(
                         fontSize: 9,
                       ),
                     ),
                   ), // add this line
                   Expanded(
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 0, 5, 0),
+                      padding: const EdgeInsets.fromLTRB(0, 0, 5, 0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           Container(
-                            padding: EdgeInsets.fromLTRB(5, 0, 5, 0),
-                            child: Text(
+                            padding: const EdgeInsets.fromLTRB(5, 0, 5, 0),
+                            child: const Text(
                               '3.6k',
                               style: TextStyle(
                                 fontSize: 10,
                               ),
                             ),
                           ),
-                          Icon(
+                          const Icon(
                             Icons.thumb_up,
                             size: 15,
                           ),

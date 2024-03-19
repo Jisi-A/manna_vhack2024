@@ -1,8 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
 
 class ai_assistant extends StatefulWidget {
+  const ai_assistant({super.key});
+
   @override
   State<ai_assistant> createState() => _ai_assistantState();
 }
@@ -10,13 +11,13 @@ class ai_assistant extends StatefulWidget {
 class _ai_assistantState extends State<ai_assistant> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         appBar: TAppBar(
           title: 'AI Expert',
           isIcon: true,
         ),
         body: Padding(
-          padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+          padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
           child: Column(
             children: [
               Row(
@@ -26,7 +27,7 @@ class _ai_assistantState extends State<ai_assistant> {
                     backgroundImage: AssetImage('assets/ai.png'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text('AI Expert',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15)),
@@ -41,7 +42,7 @@ class _ai_assistantState extends State<ai_assistant> {
               Align(
                 alignment: Alignment.centerRight,
                 child: Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                  padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                   child: Text('You',
                       style:
                           TextStyle(fontWeight: FontWeight.bold, fontSize: 15)),
@@ -59,7 +60,7 @@ class _ai_assistantState extends State<ai_assistant> {
                     backgroundImage: AssetImage('assets/ai.png'),
                   ),
                   Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
                     child: Text('AI Expert',
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 15)),

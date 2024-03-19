@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:manna_vhack2024/components/custom_appbar.dart';
 import 'package:manna_vhack2024/components/marketplace_cate.dart';
 
 class marketplace extends StatefulWidget {
+  const marketplace({super.key});
+
   @override
   State<marketplace> createState() => _marketplaceState();
 }
@@ -37,28 +38,28 @@ class _marketplaceState extends State<marketplace> {
         children: [
           Row(
             children: [
-              Expanded(
+              const Expanded(
                 child: SearchBar(),
               ),
               IconButton(
-                icon: Icon(Icons.shopping_cart),
+                icon: const Icon(Icons.shopping_cart),
                 onPressed: () {
                   // Add your onPressed function here
                 },
               ),
               IconButton(
-                icon: Icon(Icons.forum),
+                icon: const Icon(Icons.forum),
                 onPressed: () {
                   // Add your onPressed function here
                 },
               )
             ],
           ),
-          Align(
+          const Align(
             alignment: Alignment.centerLeft,
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: const Text(
+              padding: EdgeInsets.all(8.0),
+              child: Text(
                 'Categories:',
                 style: TextStyle(
                   fontSize: 20,
@@ -82,17 +83,19 @@ class _marketplaceState extends State<marketplace> {
 }
 
 class SearchBar extends StatelessWidget {
+  const SearchBar({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(10),
+      margin: const EdgeInsets.all(10),
       child: TextField(
         decoration: InputDecoration(
           labelText: 'Search',
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(20),
           ),
-          prefixIcon: Icon(Icons.search),
+          prefixIcon: const Icon(Icons.search),
         ),
       ),
     );
@@ -109,7 +112,7 @@ class CardItem {
 class HorizontalCardList extends StatelessWidget {
   final CardItem cardItem;
 
-  HorizontalCardList({required this.cardItem});
+  const HorizontalCardList({super.key, required this.cardItem});
 
   @override
   Widget build(BuildContext context) {
@@ -117,7 +120,7 @@ class HorizontalCardList extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => marketplace_cate()),
+          MaterialPageRoute(builder: (context) => const marketplace_cate()),
         );
       },
       child: Card(
@@ -133,7 +136,7 @@ class HorizontalCardList extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 cardItem.text,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
                 ),

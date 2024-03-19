@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:manna_vhack2024/components/custom_appbar.dart';
 
 class soil extends StatefulWidget {
+  const soil({super.key});
+
   @override
   State<soil> createState() => _soilState();
 }
@@ -12,7 +13,7 @@ class _soilState extends State<soil> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.white,
-        title: Align(
+        title: const Align(
           alignment: Alignment.centerLeft,
           child: Text(
             'Soil Preparation',
@@ -29,7 +30,7 @@ class _soilState extends State<soil> {
         elevation: 0,
       ),
       body: Padding(
-        padding: EdgeInsets.all(5.0),
+        padding: const EdgeInsets.all(5.0),
         child: Stack(
           children: [
             Positioned(
@@ -38,16 +39,16 @@ class _soilState extends State<soil> {
               right: 20.0,
               bottom: MediaQuery.of(context).size.height * 0.20,
               child: Container(
-                padding: EdgeInsets.fromLTRB(20.0, 4.0, 20.0, 20.0),
+                padding: const EdgeInsets.fromLTRB(20.0, 4.0, 20.0, 20.0),
                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 172, 232, 181), // Changed the color
+                  color: const Color.fromARGB(255, 172, 232, 181), // Changed the color
                   borderRadius: BorderRadius.circular(20.0), // Added border radius
                 ),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
+                    const Padding(
+                      padding: EdgeInsets.all(8.0),
                       child: Text(
                         'Type of Soils',
                         style: TextStyle(
@@ -57,8 +58,8 @@ class _soilState extends State<soil> {
                       ),
                     ),
                     Container(
-                      padding: EdgeInsets.all(8.0),
-                      decoration: BoxDecoration(
+                      padding: const EdgeInsets.all(8.0),
+                      decoration: const BoxDecoration(
                         color: Color.fromARGB(255, 255, 255, 255), // Changed the color
                       ),
                       child: Column(
@@ -73,7 +74,7 @@ class _soilState extends State<soil> {
                                   },
                                   child: Stack(
                                     children: [
-                                      Container(
+                                      SizedBox(
                                         height: 120.0,
                                         child: Image.asset(
                                           'assets/ClaySoil.jpg',
@@ -85,8 +86,8 @@ class _soilState extends State<soil> {
                                         left: 0,
                                         right: 0,
                                         child: Container(
-                                          padding: EdgeInsets.all(8.0),
-                                          child: Center(
+                                          padding: const EdgeInsets.all(8.0),
+                                          child: const Center(
                                             child: Text(
                                               'CLAY',
                                               style: TextStyle(
@@ -102,11 +103,11 @@ class _soilState extends State<soil> {
                                   ),
                                 ),
                               ),
-                              SizedBox(width: 8.0),
+                              const SizedBox(width: 8.0),
                               Expanded(
                                 child: Stack(
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       height: 120.0,
                                       child: Image.asset(
                                         'assets/LoamSoil.png',
@@ -118,8 +119,8 @@ class _soilState extends State<soil> {
                                       left: 0,
                                       right: 0,
                                       child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: const Center(
                                           child: Text(
                                             'LOAM',
                                             style: TextStyle(
@@ -136,13 +137,13 @@ class _soilState extends State<soil> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 8.0),
+                          const SizedBox(height: 8.0),
                           Row(
                             children: [
                               Expanded(
                                 child: Stack(
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       height: 120.0,
                                       child: Image.asset(
                                         'assets/SandSoil.jpg',
@@ -154,8 +155,8 @@ class _soilState extends State<soil> {
                                       left: 0,
                                       right: 0,
                                       child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: const Center(
                                           child: Text(
                                             'SAND',
                                             style: TextStyle(
@@ -170,11 +171,11 @@ class _soilState extends State<soil> {
                                   ],
                                 ),
                               ),
-                              SizedBox(width: 8.0),
+                              const SizedBox(width: 8.0),
                               Expanded(
                                 child: Stack(
                                   children: [
-                                    Container(
+                                    SizedBox(
                                       height: 120.0,
                                       child: Image.asset(
                                         'assets/SiltSoil.jpeg',
@@ -186,8 +187,8 @@ class _soilState extends State<soil> {
                                       left: 0,
                                       right: 0,
                                       child: Container(
-                                        padding: EdgeInsets.all(8.0),
-                                        child: Center(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: const Center(
                                           child: Text(
                                             'SILT',
                                             style: TextStyle(
@@ -204,15 +205,15 @@ class _soilState extends State<soil> {
                               ),
                             ],
                           ),
-                          SizedBox(height: 8.0),
+                          const SizedBox(height: 8.0),
                           Container(
                             height: 40.0,
-                            padding: EdgeInsets.only(bottom: 8.0),
+                            padding: const EdgeInsets.only(bottom: 8.0),
                             decoration: BoxDecoration(
-                              color: Color.fromARGB(255, 20, 123, 35), // Changed the color
+                              color: const Color.fromARGB(255, 20, 123, 35), // Changed the color
                               borderRadius: BorderRadius.circular(20.0), // Added border radius
                             ),
-                            child: Center(
+                            child: const Center(
                               child: Text(
                                 'OTHERS',
                                 style: TextStyle(
@@ -244,12 +245,12 @@ class _soilState extends State<soil> {
               left: 0,
               right: 0,
               child: Container( // Container C3
-                padding: EdgeInsets.symmetric(horizontal: 20.0), // Horizontal padding for C3
+                padding: const EdgeInsets.symmetric(horizontal: 20.0), // Horizontal padding for C3
                 height: MediaQuery.of(context).size.height * 0.15, // Height of C3
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                    SizedBox(
                       width: MediaQuery.of(context).size.width * 0.125, // Width of left container in C3
                       height: 120.0,
                       child: Image.asset(
@@ -262,16 +263,16 @@ class _soilState extends State<soil> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
+                          const Text(
                             'How to Prepare Soil for Planting?', // Text for top part of C3
                             style: TextStyle(fontSize: 19.0),
                           ),
-                          SizedBox(height: 1.0), // Add space between "Up" and "Down" texts
-                          Text(
+                          const SizedBox(height: 1.0), // Add space between "Up" and "Down" texts
+                          const Text(
                             'Loosen soil, amend with compost, and remove debris.', // Text for bottom part of C3
                             style: TextStyle(fontSize: 12.0, color: Colors.grey), // Text style for "Down" text
                           ),
-                          SizedBox(height: 5.0),
+                          const SizedBox(height: 5.0),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -280,12 +281,12 @@ class _soilState extends State<soil> {
                                   Navigator.pushNamed(context, '/soil_prepare');
                                 },
                                 child: Container(
-                                  padding: EdgeInsets.fromLTRB(8.0, 5.0, 8.0, 5.0),
+                                  padding: const EdgeInsets.fromLTRB(8.0, 5.0, 8.0, 5.0),
                                   decoration: BoxDecoration(
-                                    color: Color.fromARGB(255, 7, 175, 107),
+                                    color: const Color.fromARGB(255, 7, 175, 107),
                                     borderRadius: BorderRadius.circular(20.0),
                                   ),
-                                  child: Text(
+                                  child: const Text(
                                     'LEARN MORE',
                                     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0),
                                   ),

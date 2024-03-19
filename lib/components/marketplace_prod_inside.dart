@@ -1,13 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class MarketplaceProdInside extends StatelessWidget {
   final String postImage;
   final String title;
   final String price;
 
-  MarketplaceProdInside({
+  const MarketplaceProdInside({super.key, 
     this.postImage = 'assets/plant.png',
     this.title = 'Product',
     this.price = '\$90.00',
@@ -25,13 +23,13 @@ class MarketplaceProdInside extends StatelessWidget {
               // Wrap the IconButtons in a Row
               children: [
                 IconButton(
-                  icon: Icon(Icons.shopping_cart),
+                  icon: const Icon(Icons.shopping_cart),
                   onPressed: () {
                     // Add your onPressed function here
                   },
                 ),
                 IconButton(
-                  icon: Icon(Icons.forum),
+                  icon: const Icon(Icons.forum),
                   onPressed: () {
                     // Add your onPressed function here
                   },
@@ -53,7 +51,7 @@ class MarketplaceProdInside extends StatelessWidget {
                       child: Container(
                         color: Colors.grey[300],
                         child: Image.asset(
-                          '$postImage',
+                          postImage,
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -67,9 +65,9 @@ class MarketplaceProdInside extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      '$title',
+                      title,
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                     ),
                   ),
                 ),
@@ -80,8 +78,8 @@ class MarketplaceProdInside extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      '$price',
-                      style: TextStyle(
+                      price,
+                      style: const TextStyle(
                         fontSize: 25, // Adjust the font size here
                         color: Colors.blue, // Adjust the color here
                         fontWeight: FontWeight.bold,
@@ -91,8 +89,8 @@ class MarketplaceProdInside extends StatelessWidget {
                 ),
               ),
               Container(
-                child: Padding(
-                  padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                child: const Padding(
+                  padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                   child: Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
@@ -131,7 +129,13 @@ Product detail :
               onPressed: () {
                 // Add your onPressed function here
               },
-              child: Padding(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Colors.blue), // Set the background color here
+                foregroundColor: MaterialStateProperty.all<Color>(
+                    Colors.white), // Set the font color here
+              ),
+              child: const Padding(
                 padding: EdgeInsets.all(8.0), // Adjust the padding here
                 child: Text(
                   'Buy Now',
@@ -140,18 +144,18 @@ Product detail :
                   ),
                 ),
               ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.blue), // Set the background color here
-                foregroundColor: MaterialStateProperty.all<Color>(
-                    Colors.white), // Set the font color here
-              ),
             ),
             TextButton(
               onPressed: () {
                 // Add your onPressed function here
               },
-              child: Padding(
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Colors.grey), // Set the background color here
+                foregroundColor: MaterialStateProperty.all<Color>(
+                    Colors.white), // Set the font color here
+              ),
+              child: const Padding(
                 padding: EdgeInsets.all(8.0), // Adjust the padding here
                 child: Row(
                   mainAxisAlignment:
@@ -169,12 +173,6 @@ Product detail :
                     ),
                   ],
                 ),
-              ),
-              style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(
-                    Colors.grey), // Set the background color here
-                foregroundColor: MaterialStateProperty.all<Color>(
-                    Colors.white), // Set the font color here
               ),
             ),
           ],
