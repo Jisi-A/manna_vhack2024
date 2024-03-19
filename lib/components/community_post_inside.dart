@@ -70,20 +70,22 @@ class CommunityPostInside extends StatelessWidget {
                 ),
                 Container(
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
-                        title,
-                        style: const TextStyle(
-                            fontSize: 30, fontWeight: FontWeight.bold),
+                        '$title',
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            height: 1),
                       ),
                     ),
                   ),
                 ),
                 Container(
-                  child: const Padding(
-                    padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
                     child: Align(
                       alignment: Alignment.centerLeft,
                       child: Text(
@@ -132,7 +134,8 @@ class CommunityPostInside extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.fromLTRB(5, 0, 0, 5),
                         child: CircleAvatar(
-                          backgroundImage: AssetImage(avatarImage),
+                          backgroundImage:
+                              AssetImage('assets/avatar_comment.jpeg'),
                           radius: 35,
                         ),
                       ),
@@ -145,7 +148,7 @@ class CommunityPostInside extends StatelessWidget {
                                 child: Container(
                                   padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                                   child: Text(
-                                    name,
+                                    'Jonas Brothers',
                                     style: TextStyle(
                                       fontSize: 12,
                                       color: Colors.grey[800],
