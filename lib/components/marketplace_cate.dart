@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:manna_vhack2024/components/marketplace_cart.dart';
+import 'package:manna_vhack2024/components/marketplace_pay.dart';
 import 'package:manna_vhack2024/components/marketplace_prod.dart';
 
 class marketplace_cate extends StatefulWidget {
@@ -13,27 +15,34 @@ class _marketplace_cateState extends State<marketplace_cate> {
     return Scaffold(
         body: SingleChildScrollView(
       child: Column(children: [
-        Row(
-          children: [
-            BackButton(
-              color: Colors.black,
-            ),
-            Expanded(
-              child: SearchBar(),
-            ),
-            IconButton(
-              icon: Icon(Icons.shopping_cart),
-              onPressed: () {
-                // Add your onPressed function here
-              },
-            ),
-            IconButton(
-              icon: Icon(Icons.forum),
-              onPressed: () {
-                // Add your onPressed function here
-              },
-            )
-          ],
+        Padding(
+          padding:
+              EdgeInsets.only(top: 30), // Adjust the top padding value here
+          child: Row(
+            children: [
+              BackButton(
+                color: Colors.black,
+              ),
+              Expanded(
+                child: SearchBar(),
+              ),
+              IconButton(
+                icon: Icon(Icons.shopping_cart),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MarketplaceCart()), // Replace NewPage with the class of your new page
+                  );
+                },
+              ),
+              IconButton(
+                icon: Icon(Icons.forum),
+                onPressed: () {},
+              )
+            ],
+          ),
         ),
         GridView.count(
             shrinkWrap: true,

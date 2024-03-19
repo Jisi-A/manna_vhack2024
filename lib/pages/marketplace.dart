@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
+import 'package:manna_vhack2024/components/marketplace_cart.dart';
+import 'package:manna_vhack2024/components/marketplace_pay.dart';
 import 'package:manna_vhack2024/components/marketplace_cate.dart';
 
 class marketplace extends StatefulWidget {
@@ -38,19 +40,26 @@ class _marketplaceState extends State<marketplace> {
           Row(
             children: [
               Expanded(
+                  child: Padding(
+                padding: EdgeInsets.only(top: 30),
                 child: SearchBar(),
-              ),
+              )),
               IconButton(
+                padding: EdgeInsets.only(top: 30),
                 icon: Icon(Icons.shopping_cart),
                 onPressed: () {
-                  // Add your onPressed function here
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) =>
+                            MarketplaceCart()), // Replace NewPage with the class of your new page
+                  );
                 },
               ),
               IconButton(
+                padding: EdgeInsets.only(top: 30),
                 icon: Icon(Icons.forum),
-                onPressed: () {
-                  // Add your onPressed function here
-                },
+                onPressed: () {},
               )
             ],
           ),
