@@ -12,7 +12,7 @@ class ai_assistant extends StatefulWidget {
 class _ai_assistantState extends State<ai_assistant> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
         appBar: TAppBar(
           title: 'AI Expert',
           isIcon: true,
@@ -72,7 +72,7 @@ class _ai_assistantState extends State<ai_assistant> {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
-                      "I’m sorry to hear that. Here are some steps you can take to assess the situation and potentially salvage what you can:"
+                      "I\'m sorry to hear that. Here are some steps you can take to assess the situation and potentially salvage what you can:"
                       '\n\t1. Evaluate the Damage:'
                       '\n\t\t-Inspect the seedlings carefully. Look for signs of stress, wilting, or rot.\n\t\t-If the seedlings are severely damaged or beyond recovery, it might be best to start fresh with new seeds.'
                       '\n\n\t2. Remove Debris:'
@@ -94,7 +94,9 @@ class _ai_assistantState extends State<ai_assistant> {
                   child: Row(
                     children: [
                       ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+
+                        },
                         child: Text(
                           'Ask me anything',
                           style: TextStyle(
