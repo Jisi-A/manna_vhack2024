@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
-class login extends StatefulWidget {
-  const login({super.key});
+class signUp extends StatefulWidget {
+  const signUp({super.key});
 
   @override
-  State<login> createState() => _loginState();
+  State<signUp> createState() => _signUpState();
 }
 
-class _loginState extends State<login> {
+class _signUpState extends State<signUp> {
 
-  bool isChecked = false, showText = true;
+  bool showText = true;
 
   @override
   Widget build(BuildContext context) {
@@ -20,22 +19,30 @@ class _loginState extends State<login> {
         child: Center(
           child: Column(
             children: <Widget>[
-              SafeArea(
-                child: Image.asset(
-                  'assets/Original_Logo_no_bg.png',
-                  fit: BoxFit.cover,
-                      width: 300,
-                      height: 300,
-                ),
+              SizedBox(
+                height: 100,
               ),
-              const Text(
-                'MANNA',
+              Text(
+                'Sign up',
                 style: TextStyle(
-                  fontSize: 48,
-                  letterSpacing: 10,
+                  fontSize: 54,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'Roboto',
                 ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                'Sign up to enjoy the feature of Manna.',
+                style: TextStyle(
+                  fontSize: 16,
+                  fontFamily: 'Raleway',
+                  color: Colors.grey,
+                ),
+              ),
+              SizedBox(
+                height: 40,
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(24.0, 12, 24, 12),
@@ -48,6 +55,35 @@ class _loginState extends State<login> {
                       borderSide: BorderSide(color: Color.fromRGBO(6, 136, 84, 1)),
                     ),
                     labelText: 'Email Address',
+                    labelStyle: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ), // Decreased the font size to 12
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24.0, 12, 24, 12),
+                child: TextField(
+                  obscureText: showText,
+                  decoration: InputDecoration(
+                    suffixIcon: IconButton(
+                      icon: Icon(
+                        showText ? Icons.visibility_off : Icons.visibility,
+                      ),
+                      onPressed: () {
+                        setState(() {
+                          showText = !showText;
+                        });
+                      },
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color.fromRGBO(6, 136, 84, 1)),
+                    ),
+                    labelText: 'Password',
                     labelStyle: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
@@ -75,7 +111,25 @@ class _loginState extends State<login> {
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(color: Color.fromRGBO(6, 136, 84, 1)),
                     ),
-                    labelText: 'Password',
+                    labelText: 'Password Confirmation',
+                    labelStyle: TextStyle(
+                      fontSize: 16,
+                      color: Colors.grey,
+                    ), // Decreased the font size to 12
+                  ),
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(24.0, 12, 24, 12),
+                child: TextField(
+                  decoration: InputDecoration(
+                    enabledBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Colors.grey),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderSide: BorderSide(color: Color.fromRGBO(6, 136, 84, 1)),
+                    ),
+                    labelText: 'Location',
                     labelStyle: TextStyle(
                       fontSize: 16,
                       color: Colors.grey,
@@ -84,50 +138,19 @@ class _loginState extends State<login> {
                 ),
               ),
               SizedBox(
-                height: 10,
-              ),
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: 12,
-                  ),
-                  Checkbox(
-                    value: isChecked,
-                    onChanged: (value) {
-                      setState(() {
-                          isChecked = value!;
-                        }
-                      );
-                    },
-                  ),
-                  Text('Remember me'),
-                  Spacer(),
-                  Text(
-                    'Forget Password?',
-                    style: TextStyle(
-                      color: Colors.grey,
-                      decoration: TextDecoration.underline,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 24,
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 10,
+                height: 50,
               ),
               Container(
                 width: double.infinity,
                 padding: EdgeInsets.fromLTRB(24.0, 0, 24.0, 0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pop(context, '/home');
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
                     child: Text(
-                      'Sign in',
+                      'Sign up',
                       style: TextStyle(
                         fontFamily: 'Roboto',
                         fontSize: 18,
@@ -178,7 +201,7 @@ class _loginState extends State<login> {
                 padding: EdgeInsets.fromLTRB(24.0, 0, 24.0, 0),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/home');
+                    Navigator.pop(context, '/home');
                   },
                   child: Padding(
                     padding: const EdgeInsets.all(10.0),
@@ -186,7 +209,7 @@ class _loginState extends State<login> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'Sign in with Google',
+                          'Continue with Google',
                           style: TextStyle(
                             fontFamily: 'Roboto',
                             fontSize: 18,
@@ -220,7 +243,7 @@ class _loginState extends State<login> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    'Need an account?',
+                    'Already have an account?',
                     style: TextStyle(
                       fontFamily: 'Raleway',
                       color: Colors.grey,
@@ -232,10 +255,10 @@ class _loginState extends State<login> {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.pushNamed(context, '/signUp');
+                      Navigator.pop(context, '/login');
                     },
                     child: Text(
-                      'Create one',
+                      'Sign in',
                       style: TextStyle(
                         fontFamily: 'Raleway',
                         color: Color.fromRGBO(54, 122, 255, 1),
