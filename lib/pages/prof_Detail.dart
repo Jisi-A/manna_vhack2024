@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:manna_vhack2024/pages/proffessional_payment.dart';
 
 class prof_Detail extends StatelessWidget {
   const prof_Detail({super.key});
@@ -169,7 +170,7 @@ class prof_Detail extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                        height: 5, child: Container(color: Colors.grey[100])),
+                        height: 10, child: Container(color: Colors.grey[100])),
                     Row(
                       children: [
                         Container(
@@ -288,7 +289,14 @@ class prof_Detail extends StatelessWidget {
                       children: [
                         Expanded(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => profPayment(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                               backgroundColor: const Color.fromARGB(255, 48, 91,
                                   187), // Set the button background color to blue

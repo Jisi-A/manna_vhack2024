@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:manna_vhack2024/pages/prof_Detail.dart';
+import 'package:manna_vhack2024/pages/proffessional_payment.dart';
 
 class Professional extends StatelessWidget {
   final String rate;
@@ -73,7 +74,14 @@ class Professional extends StatelessWidget {
                       ),
                       Container(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => profPayment(),
+                              ),
+                            );
+                          },
                           child: Text(
                             "Book(RM$rate)",
                             style: TextStyle(
