@@ -228,6 +228,27 @@ class _profPaymentState extends State<profPayment> {
                 ],
               ),
             ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 35),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      "Pay",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 18), // Adjusted font size
+                    ),
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      minimumSize: Size(150, 50), // Adjusted button size
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
