@@ -27,7 +27,7 @@ class _signUpState extends State<signUp> {
                 style: TextStyle(
                   fontSize: 54,
                   fontWeight: FontWeight.w700,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'RobotoBlack',
                 ),
               ),
               SizedBox(
@@ -152,7 +152,7 @@ class _signUpState extends State<signUp> {
                     child: Text(
                       'Sign up',
                       style: TextStyle(
-                        fontFamily: 'Roboto',
+                        fontFamily: 'RobotoBlack',
                         fontSize: 18,
                       ),
                     ),
@@ -211,7 +211,7 @@ class _signUpState extends State<signUp> {
                         Text(
                           'Continue with Google',
                           style: TextStyle(
-                            fontFamily: 'Roboto',
+                            fontFamily: 'RobotoBlack',
                             fontSize: 18,
                           ),
                         ),

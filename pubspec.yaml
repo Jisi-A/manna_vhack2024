@@ -29,7 +29,7 @@ flutter:
         - asset: fonts/Raleway-Regular.ttf
         - asset: fonts/Raleway-Bold.ttf
           weight: 700
-    - family: Roboto
+    - family: RobotoBlack
       fonts:
         - asset: fonts/Roboto-Black.ttf
         - asset: fonts/Roboto-Bold.ttf

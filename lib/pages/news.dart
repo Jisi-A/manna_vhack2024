@@ -45,7 +45,7 @@ class news extends StatelessWidget {
                         'Breaking News: Tomato Blight Disease Strikes Penang',
                         style: TextStyle(
                           fontSize: 24,
-                          fontFamily: 'Roboto',
+                          fontFamily: 'RobotoBlack',
                           fontWeight: FontWeight.w700,
                           height: 1.2
                         ),

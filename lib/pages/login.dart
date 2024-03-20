@@ -34,7 +34,7 @@ class _loginState extends State<login> {
                   fontSize: 48,
                   letterSpacing: 10,
                   fontWeight: FontWeight.w700,
-                  fontFamily: 'Roboto',
+                  fontFamily: 'RobotoBlack',
                 ),
               ),
               Padding(
@@ -129,7 +129,7 @@ class _loginState extends State<login> {
                     child: Text(
                       'Sign in',
                       style: TextStyle(
-                        fontFamily: 'Roboto',
+                        fontFamily: 'RobotoBlack',
                         fontSize: 18,
                       ),
                     ),
@@ -188,7 +188,7 @@ class _loginState extends State<login> {
                         Text(
                           'Sign in with Google',
                           style: TextStyle(
-                            fontFamily: 'Roboto',
+                            fontFamily: 'RobotoBlack',
                             fontSize: 18,
                           ),
                         ),
