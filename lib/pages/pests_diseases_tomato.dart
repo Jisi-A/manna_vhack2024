@@ -61,7 +61,7 @@ class _pests_diseases_tomatoState extends State<pests_diseases_tomato> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildContainer('assets/damping_off.jpg', 'Damping-off', 'Fungal (Disease)', '/clay'),
+                _buildContainer('assets/damping_off.jpg', 'Damping-off', 'Fungal (Disease)', '/pests_diseases_damping_off'),
                 _buildContainer('assets/aphids.png', 'Aphids', 'Insects (Pests)', '/clay'),
               ],
             ),

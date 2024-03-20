@@ -14,6 +14,7 @@ import 'package:manna_vhack2024/pages/pests_diseases.dart';
 import 'package:manna_vhack2024/pages/pests_diseases_tomato.dart';
 import 'package:manna_vhack2024/pages/pests_diseases_tomato_learn_more.dart';
 import 'package:manna_vhack2024/pages/pests_diseases_damping_off.dart';
+import 'package:manna_vhack2024/pages/pest_monitoring.dart';
 
 //first default page is home page
 void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
@@ -32,4 +33,5 @@ void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
       '/pests_diseases_tomato': (context) => const pests_diseases_tomato(),
       '/pests_diseases_tomato_learn_more': (context) => const pests_diseases_tomato_learn_more(),
       '/pests_diseases_damping_off': (context) => pests_diseases_damping_off(),
+      '/pest_monitoring': (context) => pest_monitoring(),
     }));
