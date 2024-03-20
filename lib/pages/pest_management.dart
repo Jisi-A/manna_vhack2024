@@ -34,7 +34,7 @@ class _pest_managementState extends State<pest_management> {
             children: [
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/pests_diseases'); //replace '/pests_diseases' with '/pest_monitor'
+                  Navigator.pushNamed(context, '/pest_monitoring');
                 },
                 child: SizedBox(
                   height: 200.0,

@@ -29,26 +29,23 @@ class _soilState extends State<soil> {
         centerTitle: false,
         elevation: 0,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(5.0),
-        child: Stack(
-          children: [
-            Positioned(
-              top: 0.0,
-              left: 20.0,
-              right: 20.0,
-              bottom: MediaQuery.of(context).size.height * 0.20,
-              child: Container(
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Container(
                 padding: const EdgeInsets.fromLTRB(20.0, 4.0, 20.0, 20.0),
                 decoration: BoxDecoration(
-                  color: const Color.fromARGB(255, 172, 232, 181), // Changed the color
-                  borderRadius: BorderRadius.circular(20.0), // Added border radius
+                  color: const Color.fromARGB(255, 172, 232, 181),
+                  borderRadius: BorderRadius.circular(20.0),
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const Padding(
-                      padding: EdgeInsets.all(8.0),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
                       child: Text(
                         'Type of Soils',
                         style: TextStyle(
@@ -59,18 +56,17 @@ class _soilState extends State<soil> {
                     ),
                     Container(
                       padding: const EdgeInsets.all(8.0),
-                      decoration: const BoxDecoration(
-                        color: Color.fromARGB(255, 255, 255, 255), // Changed the color
+                      decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255),
                       ),
                       child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Row(
                             children: [
                               Expanded(
                                 child: GestureDetector(
                                   onTap: () {
-                                    Navigator.pushNamed(context, '/pest_management'); // Replace '/pest_management' with the '/clay'
+                                    Navigator.pushNamed(context, '/clay');
                                   },
                                   child: Stack(
                                     children: [
@@ -91,9 +87,9 @@ class _soilState extends State<soil> {
                                             child: Text(
                                               'CLAY',
                                               style: TextStyle(
-                                                color: Colors.white, // Changed text color to white
-                                                fontWeight: FontWeight.bold, // Made text bold
-                                                fontSize: 22.0, // Adjusted font size
+                                                color: Colors.white,
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 22.0,
                                               ),
                                             ),
                                           ),
@@ -103,7 +99,7 @@ class _soilState extends State<soil> {
                                   ),
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              SizedBox(width: 8.0),
                               Expanded(
                                 child: Stack(
                                   children: [
@@ -124,9 +120,9 @@ class _soilState extends State<soil> {
                                           child: Text(
                                             'LOAM',
                                             style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 22.0,
                                             ),
                                           ),
                                         ),
@@ -137,7 +133,7 @@ class _soilState extends State<soil> {
                               ),
                             ],
                           ),
-                          const SizedBox(height: 8.0),
+                          SizedBox(height: 8.0),
                           Row(
                             children: [
                               Expanded(
@@ -160,9 +156,9 @@ class _soilState extends State<soil> {
                                           child: Text(
                                             'SAND',
                                             style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 22.0,
                                             ),
                                           ),
                                         ),
@@ -171,7 +167,7 @@ class _soilState extends State<soil> {
                                   ],
                                 ),
                               ),
-                              const SizedBox(width: 8.0),
+                              SizedBox(width: 8.0),
                               Expanded(
                                 child: Stack(
                                   children: [
@@ -192,9 +188,9 @@ class _soilState extends State<soil> {
                                           child: Text(
                                             'SILT',
                                             style: TextStyle(
-                                              color: Colors.white, // Changed text color to white
-                                              fontWeight: FontWeight.bold, // Made text bold
-                                              fontSize: 22.0, // Adjusted font size
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 22.0,
                                             ),
                                           ),
                                         ),
@@ -208,18 +204,17 @@ class _soilState extends State<soil> {
                           const SizedBox(height: 8.0),
                           Container(
                             height: 40.0,
-                            padding: const EdgeInsets.only(bottom: 8.0),
                             decoration: BoxDecoration(
-                              color: const Color.fromARGB(255, 20, 123, 35), // Changed the color
-                              borderRadius: BorderRadius.circular(20.0), // Added border radius
+                              color: const Color.fromARGB(255, 20, 123, 35),
+                              borderRadius: BorderRadius.circular(20.0),
                             ),
                             child: const Center(
                               child: Text(
                                 'OTHERS',
                                 style: TextStyle(
-                                  color: Colors.white, // Changed text color to white
-                                  fontWeight: FontWeight.bold, // Made text bold
-                                  fontSize: 22.0, // Adjusted font size
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 22.0,
                                 ),
                               ),
                             ),
@@ -230,80 +225,69 @@ class _soilState extends State<soil> {
                   ],
                 ),
               ),
-            ),
-            Positioned(
-              bottom: MediaQuery.of(context).size.height * 0.18, // Position the grey line just above the second positioned container
-              left: 20.0,
-              right: 20.0,
-              child: Container(
-                height: 1.0, // Height of the grey line
-                color: const Color.fromARGB(255, 236,237,239), // Color of the grey line
-              ),
-            ),
-            Positioned(
-              bottom: 10.0,
-              left: 0,
-              right: 0,
-              child: Container( // Container C3
-                padding: const EdgeInsets.symmetric(horizontal: 20.0), // Horizontal padding for C3
-                height: MediaQuery.of(context).size.height * 0.15, // Height of C3
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.125, // Width of left container in C3
-                      height: 120.0,
-                      child: Image.asset(
-                        'assets/Lightbulb.png',
-                        fit: BoxFit.cover,
-                      ),
+              SizedBox(height: 20.0),
+              _buildDivider(),
+              SizedBox(height: 20.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.15,
+                    height: 80.0,
+                    child: Image.asset(
+                      'assets/Lightbulb.png',
+                      fit: BoxFit.cover,
                     ),
-                    Expanded(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          const Text(
-                            'How to Prepare Soil for Planting?', // Text for top part of C3
-                            style: TextStyle(fontSize: 19.0),
-                          ),
-                          const SizedBox(height: 1.0), // Add space between "Up" and "Down" texts
-                          const Text(
-                            'Loosen soil, amend with compost, and remove debris.', // Text for bottom part of C3
-                            style: TextStyle(fontSize: 12.0, color: Colors.grey), // Text style for "Down" text
-                          ),
-                          const SizedBox(height: 5.0),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.pushNamed(context, '/soil_prepare');
-                                },
-                                child: Container(
-                                  padding: const EdgeInsets.fromLTRB(8.0, 5.0, 8.0, 5.0),
-                                  decoration: BoxDecoration(
-                                    color: const Color.fromARGB(255, 7, 175, 107),
-                                    borderRadius: BorderRadius.circular(20.0),
-                                  ),
-                                  child: const Text(
-                                    'LEARN MORE',
-                                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0),
-                                  ),
-                                ),
+                  ),
+                  Expanded(
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          'How to Prepare Soil for Planting?',
+                          style: TextStyle(fontSize: 19.0),
+                        ),
+                        const SizedBox(height: 1.0),
+                        Text(
+                          'Loosen soil, amend with compost, and remove debris.',
+                          style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                        ),
+                        const SizedBox(height: 5.0),
+                        Center(
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, '/soil_prepare');
+                            },
+                            child: Container(
+                              padding: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 20.0),
+                              decoration: BoxDecoration(
+                                color: const Color.fromARGB(255, 7, 175, 107),
+                                borderRadius: BorderRadius.circular(20.0),
                               ),
-                            ],
+                              child: const Text(
+                                'LEARN MORE',
+                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0),
+                              ),
+                            ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
+    );
+  }
+
+  Widget _buildDivider() {
+    return Divider(
+      color: Colors.grey,
+      thickness: 1,
+      height: 20,
     );
   }
 }
