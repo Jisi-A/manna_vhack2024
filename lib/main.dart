@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:manna_vhack2024/components/botNavBar.dart';
 import 'package:manna_vhack2024/pages/account.dart';
 import 'package:manna_vhack2024/pages/login.dart';
+import 'package:manna_vhack2024/pages/news.dart';
 import 'package:manna_vhack2024/pages/signUp.dart';
 import 'package:manna_vhack2024/pages/community.dart';
 import 'package:manna_vhack2024/pages/ai_assistant.dart';
@@ -21,6 +22,7 @@ void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
       '/login': (context) => const login(),
       '/signUp': (context) => const signUp(),
       '/home': (context) => const botNavBar(),
+      '/news': (context) => const news(),
       '/community': (context) => const community(),
       '/ai_assistant': (context) => const ai_assistant(),
       '/marketplace': (context) => const marketplace(),

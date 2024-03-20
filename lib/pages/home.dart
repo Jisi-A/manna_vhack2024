@@ -250,7 +250,7 @@ class _homeState extends State<home> {
                         img: 'news.png',
                         title: '[12/3/2024]Tomato Disease',
                         content: 'Early blight disease reported in tomato crops in Penang.',
-                        nav: '/pests_diseases',
+                        nav: '/news',
                       ),
                     ],
                   ),
