@@ -245,12 +245,12 @@ class _soilState extends State<soil> {
                       children: [
                         Text(
                           'How to Prepare Soil for Planting?',
-                          style: TextStyle(fontSize: 19.0),
+                          style: TextStyle(fontSize: 20.0),
                         ),
                         const SizedBox(height: 1.0),
                         Text(
                           'Loosen soil, amend with compost, and remove debris.',
-                          style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                          style: TextStyle(fontSize: 16.0, color: Colors.grey),
                         ),
                         const SizedBox(height: 5.0),
                         Center(
@@ -266,7 +266,7 @@ class _soilState extends State<soil> {
                               ),
                               child: const Text(
                                 'LEARN MORE',
-                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 19.0),
+                                style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20.0),
                               ),
                             ),
                           ),
@@ -275,6 +275,49 @@ class _soilState extends State<soil> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(height: 20.0),
+              _buildDivider(),
+              SizedBox(height: 20.0),
+              Container(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'What to do next after preparing the soil?',
+                      style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(height: 10.0),
+                    Text(
+                      'There are essential tasks to be performed during specific weeks, including soil preparation, seedling management, pest control, and crop rotation.',
+                      style: TextStyle(fontSize: 16.0, color: Colors.grey),
+                    ),
+                    SizedBox(height: 20.0),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, '/crop_planting_tips');
+                      },
+                      child: Container(
+                        width: double.infinity,
+                        padding: const EdgeInsets.all(15.0),
+                        decoration: BoxDecoration(
+                          color: const Color.fromARGB(255, 7, 175, 107),
+                          borderRadius: BorderRadius.circular(20.0),
+                        ),
+                        child: Text(
+                          'GET SOME TIPS',
+                          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
