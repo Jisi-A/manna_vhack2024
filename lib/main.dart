@@ -18,6 +18,7 @@ import 'package:manna_vhack2024/pages/pests_diseases_damping_off.dart';
 import 'package:manna_vhack2024/pages/pest_monitoring.dart';
 import 'package:manna_vhack2024/pages/camera.dart';
 import 'package:manna_vhack2024/pages/camera_health_condition.dart';
+import 'package:manna_vhack2024/pages/crop_planting_tips.dart';
 
 //first default page is home page
 void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
@@ -40,4 +41,5 @@ void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
       '/pest_monitoring': (context) => pest_monitoring(),
       '/camera': (context) => camera(),
       '/camera_health_condition': (context) => camera_health_condition(),
+      '/crop_planting_tips': (context) => crop_planting_tips(),
     }));
