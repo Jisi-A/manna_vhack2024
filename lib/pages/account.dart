@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:settings_ui/settings_ui.dart';
 import 'package:manna_vhack2024/components/custom_appbar.dart';
 
 class account extends StatefulWidget {
