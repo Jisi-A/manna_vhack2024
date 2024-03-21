@@ -46,7 +46,7 @@ class _claysoilState extends State<claysoil> {
                   ),
                   // Container C2
                   Positioned(
-                    top: MediaQuery.of(context).size.height / 5, // Adjust the top position to overlap C1 vertically
+                    top: MediaQuery.of(context).size.height / 4, // Adjust the top position to overlap C1 vertically
                     left: MediaQuery.of(context).size.width / 2 - 75, // Center C2 horizontally
                     child: Container(
                       width: 150.0,
