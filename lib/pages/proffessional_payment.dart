@@ -2,13 +2,16 @@ import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
 
 class profPayment extends StatefulWidget {
-  const profPayment({super.key});
+  final String name;
+  profPayment({this.name = "Rosemary Mullen"});
 
   @override
   State<profPayment> createState() => _profPaymentState();
 }
 
 class _profPaymentState extends State<profPayment> {
+  int selectedMode = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +25,7 @@ class _profPaymentState extends State<profPayment> {
           children: [
             Padding(
               padding: const EdgeInsets.only(left: 10),
-              child: Text("Book a session with Rosemary Mullen"),
+              child: Text("Book a session with ${widget.name}"),
             ),
             Container(
               padding: EdgeInsets.only(top: 15),
@@ -33,31 +36,49 @@ class _profPaymentState extends State<profPayment> {
                     children: [
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              selectedMode = 1;
+                            });
+                          },
                           child: Text(
                             "On-site (RM35)",
                             style: TextStyle(
-                              color: Color.fromARGB(255, 7, 175, 107),
+                              color: selectedMode == 1
+                                  ? Color.fromARGB(255, 7, 175, 107)
+                                  : Colors.black,
                             ),
                           ),
-                          style: ElevatedButton.styleFrom(
-                            side: BorderSide(color: Colors.white),
-                            elevation: 0,
+                          style: ButtonStyle(
+                            side: MaterialStateProperty.all(
+                                BorderSide(color: Colors.white)),
+                            elevation: MaterialStateProperty.all(0),
+                            overlayColor: MaterialStateProperty.all(Colors
+                                .transparent), // Make the splash color transparent
                           ),
                         ),
                       ),
                       Expanded(
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            setState(() {
+                              selectedMode = 2;
+                            });
+                          },
                           child: Text(
                             "Online (RM25)",
                             style: TextStyle(
-                              color: Colors.black,
+                              color: selectedMode == 2
+                                  ? Color.fromARGB(255, 7, 175, 107)
+                                  : Colors.black,
                             ),
                           ),
-                          style: ElevatedButton.styleFrom(
-                            side: BorderSide(color: Colors.white),
-                            elevation: 0,
+                          style: ButtonStyle(
+                            side: MaterialStateProperty.all(
+                                BorderSide(color: Colors.white)),
+                            elevation: MaterialStateProperty.all(0),
+                            overlayColor: MaterialStateProperty.all(Colors
+                                .transparent), // Make the splash color transparent
                           ),
                         ),
                       ),
@@ -68,12 +89,16 @@ class _profPaymentState extends State<profPayment> {
                       Expanded(
                           child: Divider(
                         thickness: 1,
-                        color: Color.fromARGB(255, 7, 175, 107),
+                        color: selectedMode == 1
+                            ? Color.fromARGB(255, 7, 175, 107)
+                            : Colors.black,
                       )),
                       Expanded(
                           child: Divider(
                         thickness: 1,
-                        color: Colors.black,
+                        color: selectedMode == 2
+                            ? Color.fromARGB(255, 7, 175, 107)
+                            : Colors.black,
                       )),
                     ],
                   ),
@@ -120,27 +145,31 @@ class _profPaymentState extends State<profPayment> {
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
                         Icon(
-                          Icons.location_on,
+                          selectedMode == 2 ? Icons.laptop : Icons.location_on,
                           size: 50,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 10),
                           child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text("Address",
-                                    style:
-                                        TextStyle(fontWeight: FontWeight.bold)),
-                                Text("1, Jalan 2, Taman 3,"),
-                                Text("Kuala Mudah, Kedah, 08000"),
-                              ]),
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                selectedMode == 2 ? "Medium" : "Address",
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              Text(selectedMode == 2
+                                  ? "Zoom (Link will be emailed after payment)"
+                                  : "1, Jalan 2, Taman 3,\nKuala Mudah, Kedah, 08000"),
+                            ],
+                          ),
                         ),
                         Expanded(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               Text(
-                                "Change",
+                                selectedMode == 2 ? "" : "Change",
+
                                 style: TextStyle(
                                     color: Color.fromARGB(255, 48, 91, 187),
                                     fontSize: 17), // Adjusted font size
