@@ -126,9 +126,7 @@ class _ai_assistantState extends State<ai_assistant> {
                   child: Row(
                     children: [
                       ElevatedButton(
-                        onPressed: () {
-
-                        },
+                        onPressed: () {},
                         child: Text(
                           'Ask me anything',
                           style: TextStyle(
@@ -136,12 +134,16 @@ class _ai_assistantState extends State<ai_assistant> {
                                 107), // Set the text color to green
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          side: BorderSide(
-                            color: const Color.fromARGB(255, 7, 175,
-                                107), // Set the border color to green
-                            width: 2, // Set the border width
+                        style: ButtonStyle(
+                          side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: const Color.fromARGB(255, 7, 175,
+                                  107), // Set the border color to green
+                              width: 2, // Set the border width
+                            ),
                           ),
+                          overlayColor: MaterialStateProperty.all(Colors
+                              .transparent), // Make the splash color transparent
                         ),
                       ),
                       SizedBox(
@@ -156,12 +158,16 @@ class _ai_assistantState extends State<ai_assistant> {
                                 107), // Set the text color to green
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          side: BorderSide(
-                            color: const Color.fromARGB(255, 7, 175,
-                                107), // Set the border color to green
-                            width: 2, // Set the border width
+                        style: ButtonStyle(
+                          side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: const Color.fromARGB(255, 7, 175,
+                                  107), // Set the border color to green
+                              width: 2, // Set the border width
+                            ),
                           ),
+                          overlayColor: MaterialStateProperty.all(Colors
+                              .transparent), // Make the splash color transparent
                         ),
                       ),
                       SizedBox(
@@ -176,12 +182,16 @@ class _ai_assistantState extends State<ai_assistant> {
                                 107), // Set the text color to green
                           ),
                         ),
-                        style: ElevatedButton.styleFrom(
-                          side: BorderSide(
-                            color: const Color.fromARGB(255, 7, 175,
-                                107), // Set the border color to green
-                            width: 2, // Set the border width
+                        style: ButtonStyle(
+                          side: MaterialStateProperty.all(
+                            BorderSide(
+                              color: const Color.fromARGB(255, 7, 175,
+                                  107), // Set the border color to green
+                              width: 2, // Set the border width
+                            ),
                           ),
+                          overlayColor: MaterialStateProperty.all(Colors
+                              .transparent), // Make the splash color transparent
                         ),
                       ),
                     ],

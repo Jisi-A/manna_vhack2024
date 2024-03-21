@@ -3,7 +3,17 @@ import 'package:flutter/widgets.dart';
 import 'package:manna_vhack2024/pages/proffessional_payment.dart';
 
 class prof_Detail extends StatelessWidget {
-  const prof_Detail({super.key});
+  final String rate;
+  final String avatarImage;
+  final String special;
+  final String name;
+
+  prof_Detail({
+    this.rate = '25',
+    this.avatarImage = 'assets/girl.jpeg',
+    this.special = 'pest control, home garden management',
+    this.name = 'Chow Qian Ru',
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,10 +31,10 @@ class prof_Detail extends StatelessWidget {
                 child: Column(
                   children: [
                     CircleAvatar(
-                      foregroundImage: AssetImage("assets/avatar.png"),
+                      foregroundImage: AssetImage("$avatarImage"),
                       radius: 70,
                     ),
-                    Text("Rosemary Mullen",
+                    Text("$name",
                         style: TextStyle(
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
@@ -45,7 +55,7 @@ class prof_Detail extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         )),
                     Text(
-                        "Hello! My name is Rosemary Mullen, and I bring 5 years of experience working in the field of agriculture. Throughout my career, I’ve achieved significant milestones including implementing precision irrigation techniques. I’m excited to offer my expertise in pest control. Whether it’s crop management, sustainable practices, or agribusiness, I’m here to provide top-notch services tailored to your needs"),
+                        "Hello! My name is $name, and I bring 5 years of experience working in the field of agriculture. Throughout my career, I’ve achieved significant milestones including implementing precision irrigation techniques. I’m excited to offer my expertise in pest control. Whether it’s crop management, sustainable practices, or agribusiness, I’m here to provide top-notch services tailored to your needs"),
                     Padding(
                       padding: const EdgeInsets.all(10.0),
                       child: Row(
@@ -96,7 +106,7 @@ class prof_Detail extends StatelessWidget {
                       style: TextStyle(fontWeight: FontWeight.bold),
                     ),
                     SizedBox(
-                        height: 5, child: Container(color: Colors.grey[100])),
+                        height: 10, child: Container(color: Colors.grey[100])),
                     Text("Skills"),
                     SizedBox(height: 5),
                     SingleChildScrollView(
@@ -170,7 +180,7 @@ class prof_Detail extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                        height: 10, child: Container(color: Colors.grey[100])),
+                        height: 20, child: Container(color: Colors.grey[100])),
                     Row(
                       children: [
                         Container(
@@ -232,7 +242,7 @@ class prof_Detail extends StatelessWidget {
                       ],
                     ),
                     SizedBox(
-                        height: 5, child: Container(color: Colors.grey[100])),
+                        height: 20, child: Container(color: Colors.grey[100])),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -293,7 +303,8 @@ class prof_Detail extends StatelessWidget {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => profPayment(),
+                                  builder: (context) =>
+                                      profPayment(name: this.name),
                                 ),
                               );
                             },

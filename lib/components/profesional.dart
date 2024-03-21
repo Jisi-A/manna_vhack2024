@@ -13,7 +13,7 @@ class Professional extends StatelessWidget {
   Professional({
     this.rate = '25',
     this.avatarImage = 'assets/girl.jpeg',
-    this.special = 'specialise in pest control, home garden \nmanagement',
+    this.special = 'pest control, home garden management',
     this.name = 'Chow Qian Ru',
   });
 
@@ -23,7 +23,12 @@ class Professional extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => prof_Detail()),
+          MaterialPageRoute(
+              builder: (context) => prof_Detail(
+                  rate: this.rate,
+                  avatarImage: this.avatarImage,
+                  special: this.avatarImage,
+                  name: this.name)),
         );
       },
       child: Container(
@@ -78,7 +83,8 @@ class Professional extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => profPayment(),
+                                builder: (context) =>
+                                    profPayment(name: this.name),
                               ),
                             );
                           },

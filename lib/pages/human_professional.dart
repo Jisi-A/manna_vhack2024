@@ -35,7 +35,7 @@ class HumanProfessional extends StatelessWidget {
                     child: Row(
                       children: [
                         Padding(
-                          padding: const EdgeInsets.fromLTRB(20, 8, 8, 8),
+                          padding: const EdgeInsets.only(left: 30),
                           child: Text(
                             "Nearest",
                             style: TextStyle(
@@ -60,7 +60,11 @@ class HumanProfessional extends StatelessWidget {
                           color: Colors.grey,
                           thickness: 1,
                         ),
-                        Expanded(child: Text("Sessions")),
+                        Expanded(
+                            child: Padding(
+                          padding: const EdgeInsets.only(left: 10),
+                          child: Text("Sessions"),
+                        )),
                         IconButton(
                           icon: Icon(Icons.sort),
                           onPressed: () {
@@ -82,11 +86,9 @@ class HumanProfessional extends StatelessWidget {
                         ),
                       ),
                       Expanded(
-                        child: Expanded(
-                          child: Divider(
-                            color: Colors.grey,
-                            thickness: 1,
-                          ),
+                        child: Divider(
+                          color: Colors.grey,
+                          thickness: 1,
                         ),
                       )
                     ],
@@ -97,13 +99,31 @@ class HumanProfessional extends StatelessWidget {
                         Professional(),
                         Professional(
                           name: "Rosemary Mullen",
+                          avatarImage: "assets/rosemary.png",
+                          special: "prnamental plants, insect control",
+                          rate: "35",
                         ),
-                        Professional(name: "David Parkinson"),
-                        Professional(name: "Liam Payne"),
                         Professional(
-                          name: "Aoha Yamamoto",
+                          name: "David Parkinson",
+                          avatarImage: "assets/avatar_yc.jpeg",
+                          special: "water features, garden furniture",
+                          rate: "60",
                         ),
-                        Professional(name: "Siti Aishah"),
+                        Professional(
+                          name: "Liam Payne",
+                          avatarImage: "assets/avatar3.jpg",
+                          special: "biological control, composting",
+                          rate: "37",
+                        ),
+                        Professional(
+                            name: "Aoha Yamamoto",
+                            avatarImage: "assets/avatar_aoha.jpeg",
+                            special: "insect management",
+                            rate: "29"),
+                        Professional(
+                            name: "Siti Aishah",
+                            avatarImage: "assets/avatar_aisyah.jpg",
+                            rate: "50"),
                       ],
                     ),
                   ),
