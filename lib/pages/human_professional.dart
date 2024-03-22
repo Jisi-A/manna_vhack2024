@@ -78,11 +78,9 @@ class HumanProfessional extends StatelessWidget {
                     children: [
                       Container(
                         width: 115,
-                        child: Expanded(
-                          child: Divider(
-                            color: Colors.green,
-                            thickness: 2,
-                          ),
+                        child: Divider(
+                          color: Colors.green,
+                          thickness: 2,
                         ),
                       ),
                       Expanded(

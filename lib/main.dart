@@ -21,25 +21,30 @@ import 'package:manna_vhack2024/pages/camera_health_condition.dart';
 import 'package:manna_vhack2024/pages/crop_planting_tips.dart';
 
 //first default page is home page
-void main() => runApp(MaterialApp(initialRoute: '/login', routes: {
-      '/login': (context) => const login(),
-      '/signUp': (context) => const signUp(),
-      '/home': (context) => const botNavBar(),
-      '/news': (context) => const news(),
-      '/community': (context) => const community(),
-      '/ai_assistant': (context) => const ai_assistant(),
-      '/marketplace': (context) => const marketplace(),
-      '/account': (context) => const account(),
-      '/soil': (context) => const soil(),
-      '/clay': (context) => const claysoil(),
-      '/soil_prepare': (context) => const soil_prepare(),
-      '/pest_management': (context) => const pest_management(),
-      '/pests_diseases': (context) => const pests_diseases(),
-      '/pests_diseases_tomato': (context) => const pests_diseases_tomato(),
-      '/pests_diseases_tomato_learn_more': (context) => const pests_diseases_tomato_learn_more(),
-      '/pests_diseases_damping_off': (context) => pests_diseases_damping_off(),
-      '/pest_monitoring': (context) => pest_monitoring(),
-      '/camera': (context) => camera(),
-      '/camera_health_condition': (context) => camera_health_condition(),
-      '/crop_planting_tips': (context) => crop_planting_tips(),
-    }));
+void main() => runApp(MaterialApp(
+        debugShowCheckedModeBanner: false,
+        initialRoute: '/login',
+        routes: {
+          '/login': (context) => const login(),
+          '/signUp': (context) => const signUp(),
+          '/home': (context) => const botNavBar(),
+          '/news': (context) => const news(),
+          '/community': (context) => const community(),
+          '/ai_assistant': (context) => const ai_assistant(),
+          '/marketplace': (context) => const marketplace(),
+          '/account': (context) => const account(),
+          '/soil': (context) => const soil(),
+          '/clay': (context) => const claysoil(),
+          '/soil_prepare': (context) => const soil_prepare(),
+          '/pest_management': (context) => const pest_management(),
+          '/pests_diseases': (context) => const pests_diseases(),
+          '/pests_diseases_tomato': (context) => const pests_diseases_tomato(),
+          '/pests_diseases_tomato_learn_more': (context) =>
+              const pests_diseases_tomato_learn_more(),
+          '/pests_diseases_damping_off': (context) =>
+              pests_diseases_damping_off(),
+          '/pest_monitoring': (context) => pest_monitoring(),
+          '/camera': (context) => camera(),
+          '/camera_health_condition': (context) => camera_health_condition(),
+          '/crop_planting_tips': (context) => crop_planting_tips(),
+        }));
