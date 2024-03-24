@@ -71,6 +71,6 @@ Software development, server maintenance, content acquisition, marketing, custom
 Lai Yicheng -
 Lee Ying Shen -
 Lim Jia Liang -
-Yeo Din Song - [example@gmail.com](dinsong@gmail.com)
+Yeo Din Song - [dinsong@gmail.com]
 
 Project Link: [https://github.com/your_username_/Project-Name](https://github.com/your_username_/Project-Name)
