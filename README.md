@@ -1,5 +1,7 @@
 # VHACK2024_FarmerHaven_Manna
 
+![Manna Logo](./screenshots/logo.png "")
+
 In a world where agriculture plays a crucial role in ensuring food security and sustainability, it is imperative to empower novice farmers with effective crop management techniques. Our case study focuses on developing accessible and user-friendly solutions for individuals with limited knowledge and experience in crop cultivation.
 
 Our proposed solution encompasses the following key features:
@@ -14,9 +16,26 @@ Our proposed solution encompasses the following key features:
 9. E-commerce system
 10. Community engagement functionality
 
-### Requirement:
--Flutter
+### Framework:
+- Flutter
 ### Installation:
+1. Change directory you wish to store the repo
+```
+cd /your designated directory
+```
+
+2. Clone this repository 
+```
+git clone https://github.com/Jisi-A/manna_vhack2024.git
+```
+
+3. If you are using Visual Studio Code, run this to build the app:
+```
+flutter run -d chrome
+``` 
+
+4. It is recommended to use the **Pixel 7** emulator as it has been optimized for the best experience. Other resolutions may not be fully optimized yet.
+
 
 ### Screenshots:
 1. Home
