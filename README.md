@@ -26,24 +26,31 @@ flutter run
 ```
 ### Screenshots:
 1. Home
+
 ![Home page screenshot](./home.png "")
 
 2. Community
+
 ![Community screenshot](./community.png "")
 
 3. AI Expert
+
 ![AI Expert screenshot](./AI.png "")
 
 4. Marketplace
+
 ![Marketplace screenshot](./marketplace.png "")
 
 5. Alerts
+
 ![Alert screenshot](./alert.png "")
 
 6. Soil Preperation
+
 ![Soil prep screenshot](./soilPrep.png "")
 
 7. Planting Guidelines
+
 ![Crio planting screenshot](./tips.png "")
 
 ### Business Model:
