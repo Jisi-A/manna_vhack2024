@@ -58,8 +58,8 @@ class MarketplaceCart extends StatelessWidget {
                     children: <Widget>[
                       Image.asset(
                         'assets/plant.png', // Replace with your image url
-                        width: 100, // Adjust as needed
-                        height: 100, // Adjust as needed
+                        width: 90, // Adjust as needed
+                        height: 90, // Adjust as needed
                         fit: BoxFit.cover,
                       ),
                       SizedBox(width: 10), // Add some spacing
