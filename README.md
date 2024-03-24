@@ -107,6 +107,13 @@ flutter run
 - Cost structure
     - Software development, server maintenance, content acquisition, marketing, customer support, and operational expenses
 
+### Future improvements & potential expansion:
+- To stimulate the continuous usage of our app, minigames similar to shopee could be implemented to let users earn coins that acts as extra credit for discount when making a purchase. 
+- Sensors can be integrated to provide realtime data of the crops such as temperature, humidity, soil moisture, rain.
+- Community page could be expanded to include features like user profiles, direct messaging between users, and the ability to create and join groups based on interests.
+- AI Expert could be improved to handle more complex queries, provide more accurate responses, and offer a more conversational experience.
+
+
 
 ### Contact:
 
