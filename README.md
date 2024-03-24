@@ -18,6 +18,8 @@ Our proposed solution encompasses the following key features:
 
 ### Framework:
 - Flutter
+- Dart SDK
+- Android Studio or VS Code
 ### Installation:
 1. Change directory you wish to store the repo
 ```
@@ -36,7 +38,13 @@ flutter run -d chrome
 
 4. It is recommended to use the **Pixel 7** emulator as it has been optimized for the best experience. Other resolutions may not be fully optimized yet.
 
-
+```bash
+git clone https://github.com/Jisi-A/manna_vhack2024
+cd manna_vhack2024
+```
+```bash
+flutter run
+```
 ### Screenshots:
 1. Home
 
@@ -104,3 +112,16 @@ flutter run -d chrome
 
 - Cost structure
     - Software development, server maintenance, content acquisition, marketing, customer support, and operational expenses
+
+
+### Contact:
+
+Lai Yicheng -
+
+Lee Ying Shen -
+
+Lim Jia Liang -
+
+Yeo Din Song - [dinsong@gmail.com](dinsong@gmail.com)
+
+Project Link: [https://github.com/Jisi-A/manna_vhack2024](https://github.com/Jisi-A/manna_vhack2024)
