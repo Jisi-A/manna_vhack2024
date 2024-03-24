@@ -65,3 +65,12 @@ Integrates pest management, soil preparation methods, crop planting tips, crop h
 
 -Cost structure
 Software development, server maintenance, content acquisition, marketing, customer support, and operational expenses
+
+### Contact:
+## Contact -
+Lai Yicheng -
+Lee Ying Shen -
+Lim Jia Liang -
+Yeo Din Song - [example@gmail.com](dinsong@gmail.com)
+
+Project Link: [https://github.com/your_username_/Project-Name](https://github.com/your_username_/Project-Name)
