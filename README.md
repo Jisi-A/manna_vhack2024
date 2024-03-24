@@ -114,7 +114,7 @@ Lai Yicheng -
 
 Lee Ying Shen - [johnaslee97@gmail.com](johnaslee97@gmail.com)
 
-Lim Jia Liang -
+Lim Jia Liang - [m-3222069@moe-dl.edu.my](m-3222069@moe-dl.edu.my)
 
 Yeo Din Song - [dinsong@gmail.com](dinsong@gmail.com)
 
