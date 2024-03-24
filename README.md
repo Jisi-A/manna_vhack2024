@@ -17,7 +17,13 @@ Our proposed solution encompasses the following key features:
 ### Requirement:
 -Flutter
 ### Installation:
-
+```bash
+git clone https://github.com/Jisi-A/manna_vhack2024
+cd manna_vhack2024
+```
+```bash
+flutter run
+```
 ### Screenshots:
 1. Home
 ![Home page screenshot](./home.png "")
