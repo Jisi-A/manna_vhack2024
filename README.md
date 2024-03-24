@@ -74,6 +74,6 @@ Lee Ying Shen -
 
 Lim Jia Liang -
 
-Yeo Din Song - [dinsong@gmail.com]
+Yeo Din Song - [dinsong@gmail.com](dinsong@gmail.com)
 
-Project Link: [https://github.com/your_username_/Project-Name](https://github.com/your_username_/Project-Name)
+Project Link: [https://github.com/Jisi-A/manna_vhack2024](https://github.com/Jisi-A/manna_vhack2024)
