@@ -2,6 +2,9 @@
 
 ![Manna Logo](./screenshots/logo.png "")
 
+### YouTube Link
+https://youtu.be/F6UJ00PzhnM
+
 In a world where agriculture plays a crucial role in ensuring food security and sustainability, it is imperative to empower novice farmers with effective crop management techniques. Our case study focuses on developing accessible and user-friendly solutions for individuals with limited knowledge and experience in crop cultivation.
 
 Our proposed solution encompasses the following key features:
@@ -126,7 +129,7 @@ Our application addresses the needs of each segment by providing actionable insi
 
 ### Contact:
 
-Lai Yicheng -
+Lai Yicheng - [7216lyc@gmail.com](7216lyc@gmail.com)
 
 Lee Ying Shen - [johnaslee97@gmail.com](johnaslee97@gmail.com)
 
