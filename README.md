@@ -2,6 +2,9 @@
 
 ![Manna Logo](./screenshots/logo.png "")
 
+### YouTube Link
+https://youtu.be/F6UJ00PzhnM
+
 In a world where agriculture plays a crucial role in ensuring food security and sustainability, it is imperative to empower novice farmers with effective crop management techniques. Our case study focuses on developing accessible and user-friendly solutions for individuals with limited knowledge and experience in crop cultivation.
 
 Our proposed solution encompasses the following key features:
@@ -115,13 +118,29 @@ flutter run
 
 
 
+### Market Segments:
+- Large-scale Farmers
+    - These commercial farmers prioritize efficiency, scalability, and yield optimization
+
+- Smallholder Farmers
+    - They operate on smaller plots, they value cost-effective solutions tailored to their specific needs
+
+- Agricultural Professionals
+    - They require advanced tools and insights for advisory roles
+
+- Agricultural Enthusiasts
+    - They seek educational resources and community involvement
+
+Our application addresses the needs of each segment by providing actionable insights, and relevant content tailored to their specific interests and requirements.
+
+
 ### Contact:
 
-Lai Yicheng -
+Lai Yicheng - [7216lyc@gmail.com](7216lyc@gmail.com)
 
 Lee Ying Shen - [johnaslee97@gmail.com](johnaslee97@gmail.com)
 
-Lim Jia Liang -
+Lim Jia Liang - [m-3222069@moe-dl.edu.my](m-3222069@moe-dl.edu.my)
 
 Yeo Din Song - [dinsong@gmail.com](dinsong@gmail.com)
 
