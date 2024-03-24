@@ -108,6 +108,22 @@ flutter run
     - Software development, server maintenance, content acquisition, marketing, customer support, and operational expenses
 
 
+### Market Segments:
+- Large-scale Farmers
+    - These commercial farmers prioritize efficiency, scalability, and yield optimization
+
+- Smallholder Farmers
+    - They operate on smaller plots, they value cost-effective solutions tailored to their specific needs
+
+- Agricultural Professionals
+    - They require advanced tools and insights for advisory roles
+
+- Agricultural Enthusiasts
+    - They seek educational resources and community involvement
+
+Our application addresses the needs of each segment by providing actionable insights, and relevant content tailored to their specific interests and requirements.
+
+
 ### Contact:
 
 Lai Yicheng -
