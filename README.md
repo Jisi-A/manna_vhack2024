@@ -118,7 +118,7 @@ flutter run
 
 Lai Yicheng -
 
-Lee Ying Shen -
+Lee Ying Shen - [johnaslee97@gmail.com](johnaslee97@gmail.com)
 
 Lim Jia Liang -
 
