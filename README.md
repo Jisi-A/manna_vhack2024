@@ -14,8 +14,10 @@ Our proposed solution encompasses the following key features:
 9. E-commerce system
 10. Community engagement functionality
 
-### Requirement:
--Flutter
+### Prerequisites
+- Flutter SDK
+- Dart SDK
+- Android Studio or VS Code
 ### Installation:
 ```bash
 git clone https://github.com/Jisi-A/manna_vhack2024
