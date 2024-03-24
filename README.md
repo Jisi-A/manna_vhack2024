@@ -33,18 +33,12 @@ git clone https://github.com/Jisi-A/manna_vhack2024.git
 
 3. If you are using Visual Studio Code, run this to build the app:
 ```
-flutter run -d chrome
+cd manna_vhack2024
+flutter run
 ``` 
 
 4. It is recommended to use the **Pixel 7** emulator as it has been optimized for the best experience. Other resolutions may not be fully optimized yet.
 
-```bash
-git clone https://github.com/Jisi-A/manna_vhack2024
-cd manna_vhack2024
-```
-```bash
-flutter run
-```
 ### Screenshots:
 1. Home
 
